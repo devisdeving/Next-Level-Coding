@@ -62,32 +62,32 @@ margin: 0 auto;
 
 #hover-container-2:hover .hovered-text {
     display: block;
-      transition: 2s linear 1s;
+      transition: all 2s linear 1s;
 }
 
 #hover-container-2:hover .original-text {
     display: none;
-      transition: 2s linear 1s;
+      transition: all 2s linear 1s;
 }
 
 #hover-container-3:hover .hovered-text {
     display: block;
-      transition: 2s linear 1s;
+      transition: all 2s linear 1s;
 }
 
 #hover-container-3:hover .original-text {
     display: none;
-      transition: 2s linear 1s;
+      transition: all 2s linear 1s;
 }
 
 #hover-container-4:hover .hovered-text {
     display: block;
-      transition: 2s linear 1s;
+      transition: all 2s linear 1s;
 }
 
 #hover-container-4:hover .original-text {
     display: none;
-      transition: 2s linear 1s;
+      transition: all 2s linear 1s;
 }
 
 #hover-container-5:hover .hovered-text {
@@ -102,8 +102,8 @@ margin: 0 auto;
 
 .info {
     display: flex;
-    width: 100vw;
     justify-content: center;
+    width: 100vw;
 }
 
 .info section {
@@ -183,7 +183,7 @@ h4 {
 }
 
 .mole::after {
-    content: 'SELF DOUBT';
+    content: 'COULD IT BE BETTER?';
     color: var(--brown);
 }
 
