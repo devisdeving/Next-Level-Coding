@@ -44,18 +44,20 @@ body {
 }
 
 #hover-container-1 h2, h1 {
-    font-size: 5em;
+    font-size: 7em;
     width: 100vw;
 }
 
+#hover-container-1 {
+margin: 0 auto;
+}
+
 #hover-container-1:hover .hovered-text {
-    display: block;
-    transition: 2s linear 1s;
+    display: flex;
 }
 
 #hover-container-1:hover .original-text {
     display: none;
-      transition: 2s linear 1s;
 }
 
 #hover-container-2:hover .hovered-text {
@@ -90,12 +92,12 @@ body {
 
 #hover-container-5:hover .hovered-text {
     display: block;
-      transition: 2s linear 1s;
+    transform: translateY(-100px);
 }
 
 #hover-container-5:hover .original-text {
     display: none;
-    transition: 2s linear 1s;
+    transform: translateY(-100px);
 }
 
 .info {
@@ -126,6 +128,7 @@ h1, h2, div, li, h3, p, a {
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    padding: 1.5em;
 }
 
 .game-deets h3 {
@@ -135,6 +138,7 @@ h1, h2, div, li, h3, p, a {
 h1, h2 {
     font-family: var(--Hfont);
     /* text-transform: uppercase; */
+    line-height: 85%;
 }
 
 /* #hover-container-1 {
@@ -183,6 +187,18 @@ h4 {
     color: var(--brown);
 }
 
+button {
+    margin-top: -10px;
+}
+
+.mole, button:hover {
+    cursor: pointer;
+}
+
 a::after {
     content: '↗️';
+}
+
+footer {
+    height: 50px;
 }
