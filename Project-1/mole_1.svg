@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 299.01">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: DazzedTRIAL-SemiBold, 'Dazzed TRIAL';
+        font-size: 27.33px;
+        font-weight: 600;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-3" d="m344.93,139.47C174.37,170.7,219.91,83.34,251.39,0c-45.58,71.79-84.81,153.52-191.93,61.99C99.21,112.76,95.32,151.64,0,141.59c94.51,22.29,109.51,46.5,12.55,126.68,128.09-85.46,159.25-75.17,193.46,30.74-1.24-113.18,98.07-90.99,193.98-62.33-90.17-34.09-167.33-64.65-55.07-97.21Z"/>
+      <text class="cls-1" transform="translate(141 156.02)"><tspan x="0" y="0">SELF</tspan><tspan x="-15.91" y="26.9">DOU</tspan><tspan class="cls-2" x="47.94" y="26.9">B</tspan><tspan x="66.04" y="26.9">T</tspan></text>
+    </g>
+  </g>
+</svg>

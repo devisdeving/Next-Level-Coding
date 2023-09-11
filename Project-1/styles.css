@@ -1,6 +1,27 @@
+@font-face {
+    font-family: 'DazzedTRIAL-SemiBold';
+    src: url('WOFF/DazzedTRIAL-SemiBold.woff2') format('woff2'),
+        url('WOFF/DazzedTRIAL-SemiBold.woff') format('woff');
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'ABCLaica-Book-Trial';
+    src: url('WOFF/ABCLaica-Book-Trial.woff2') format('woff2'),
+        url('WOFF/ABCLaica-Book-Trial.woff') format('woff');
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+}
+
 :root {
-    --font: sans-serif;
+    --Hfont: 'ABCLaica-Book-Trial', var(--font);
+    --font: 'DazzedTRIAL-SemiBold', sans-serif;
     --font-size : 24px;
+    --vermillion: #ff2e17;
+    --brown: #2f180e;
 }
 
 body {
@@ -10,6 +31,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--brown);
+    background: radial-gradient(100% 100% at 50% 0%, #1C66FB 0%, #9C9C9C 100%);
 }
 
 .hovered-text {
@@ -21,53 +44,68 @@ body {
 }
 
 #hover-container-1 h2, h1 {
-    font-size: 48px;
+    font-size: 5em;
     width: 100vw;
 }
 
 #hover-container-1:hover .hovered-text {
     display: block;
+    transition: 2s linear 1s;
 }
 
 #hover-container-1:hover .original-text {
     display: none;
+      transition: 2s linear 1s;
 }
 
 #hover-container-2:hover .hovered-text {
     display: block;
+      transition: 2s linear 1s;
 }
 
 #hover-container-2:hover .original-text {
     display: none;
+      transition: 2s linear 1s;
 }
 
 #hover-container-3:hover .hovered-text {
     display: block;
+      transition: 2s linear 1s;
 }
 
 #hover-container-3:hover .original-text {
     display: none;
+      transition: 2s linear 1s;
 }
 
 #hover-container-4:hover .hovered-text {
     display: block;
+      transition: 2s linear 1s;
 }
 
 #hover-container-4:hover .original-text {
     display: none;
+      transition: 2s linear 1s;
 }
 
 #hover-container-5:hover .hovered-text {
     display: block;
+      transition: 2s linear 1s;
 }
 
 #hover-container-5:hover .original-text {
     display: none;
+    transition: 2s linear 1s;
 }
 
 .info {
     display: flex;
-    flex: 1 1 1 1 0;
+    width: 100vw;
+    justify-content: center;
+}
+
+.info section {
+    height: max-content;
 }
 
 .info h2 {
@@ -78,10 +116,10 @@ body {
     padding: 1em;
 }
 
-h1, h2, div, li, h3, p {
-    background-color: gainsboro;
+h1, h2, div, li, h3, p, a {
     padding: 0.5em 1em;
-    border-radius: 20em;
+    /* background-color: var(--brown);
+    border-radius: 20em; */
 }
 
 .game-deets {
@@ -94,6 +132,30 @@ h1, h2, div, li, h3, p {
     width: 100%;
 }
 
+h1, h2 {
+    font-family: var(--Hfont);
+    /* text-transform: uppercase; */
+}
+
+/* #hover-container-1 {
+    padding: 0.5em 1em;
+    background-color: var(--brown);
+    border-radius: 20em;
+    color: var(--vermillion);
+} */
+
+.right, .left {
+    background-color: transparent;
+    padding: 0;
+}
+
+h4 {
+    color: var(--vermillion);
+    background-color: var(--brown);
+    border-radius: 20em;
+    padding: 0.5em 1em;
+}
+
 .grid {
     height: 100vh;
     width: 100vw;
@@ -101,12 +163,26 @@ h1, h2, div, li, h3, p {
     flex-wrap: wrap;
 }
 
-.grid .square {
+.square {
     height: 34vh;
     width: 33vw;
+    background-color: transparent;
 }
 
 .mole {
-    background-color: rgb(39, 197, 255);
-    border-radius: 50%;
+    /* background-image: url('mole_1.png'); */
+    background-color: var(--vermillion);
+    display: flex;
+    border-radius: 20em;
+    align-items: center;
+    justify-content: center;
+}
+
+.mole::after {
+    content: 'SELF DOUBT';
+    color: var(--brown);
+}
+
+a::after {
+    content: '↗️';
 }
