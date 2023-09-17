@@ -1,0 +1,45 @@
+header {
+    padding: 1em;
+    background-color: white;
+    font-size: 48px;
+    font-family: 'Georgia';
+}
+
+#gallery {
+    height: 140vmax;
+    width: 140vmax;  
+    position: absolute;
+    background-color: #000000;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows:  20% 20% 20% 20% 20%;
+    /* grid-template-columns: 500px;
+    grid-template-rows: 300px; */
+}
+
+.tile {
+    background-color: #dcdcdc;
+    height: max-content;
+    height: 20em;
+    width: 30em;
+    margin: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.3em;
+}
+
+.lines {
+    background-color: transparent;
+}
+
+.line {
+    aspect-ratio: 20;
+    border-radius: 3em;
+    background-color: #dcdcdc;
+    margin: 0.4em;
+    height: 0.8em;
+}
