@@ -50,19 +50,48 @@ h2 {
     z-index: 0;
     object-fit: cover;
 }
-
-#metroc {
-    position: absolute;
-    z-index: 1;
-    height: 1500px;
-    width: 1500px;
+#stack {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
 }
 
-#mouse {
+#stack img {
+    object-fit: cover;
+}
+
+#stack img:nth-child(1) {
+    height: 221px;
+    position: absolute;
+    z-index: 1;
+}
+
+#stack img:nth-child(2) {
+    height: 469px;
+    width: 467px;
     position: absolute;
     z-index: 2;
-    height: 40%;
-    transform: translate(-50%, -50%);
+}
+
+#stack img:nth-child(3) {
+    height: 813px;
+    width: 730px;
+    position: absolute;
+    z-index: 3;
+}
+
+#stack img:nth-child(4) {
+    height: 1015px;
+    position: absolute;
+    z-index: 4;
+}
+
+#stack img:nth-child(5) {
+    height: 1272px;
+    position: absolute;
+    z-index: 5;
 }
 
 footer {
