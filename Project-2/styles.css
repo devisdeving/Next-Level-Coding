@@ -60,38 +60,34 @@ h2 {
 
 #stack img {
     object-fit: cover;
+    position: absolute;
 }
 
 #stack img:nth-child(1) {
     height: 221px;
-    position: absolute;
-    z-index: 1;
+    z-index: 5;
 }
 
 #stack img:nth-child(2) {
     height: 469px;
     width: 467px;
-    position: absolute;
-    z-index: 2;
+    z-index: 4;
 }
 
 #stack img:nth-child(3) {
     height: 813px;
     width: 730px;
-    position: absolute;
     z-index: 3;
 }
 
 #stack img:nth-child(4) {
     height: 1015px;
-    position: absolute;
-    z-index: 4;
+    z-index: 2;
 }
 
 #stack img:nth-child(5) {
     height: 1272px;
-    position: absolute;
-    z-index: 5;
+    z-index: 1;
 }
 
 footer {
