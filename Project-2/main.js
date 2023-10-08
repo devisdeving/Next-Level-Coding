@@ -1,5 +1,5 @@
 const stack = document.getElementById("stack"),
-      vectors = stack.getElementsByClassName("vector");
+ vectors = Array.from(stack.getElementsByClassName("vector"));
 
 const getActive = () => document.body.dataset.active === "true",
       setActiveTo = active => document.body.dataset.active = active;
@@ -25,7 +25,7 @@ const shiftAll = (vectors, rangeX, rangeY) => {
 
 const shiftStack = (e, vectors) => {  
   const rect = stack.getBoundingClientRect(),
-        radius = 1000;
+        radius = 800;
   
   const centerX = rect.left + (rect.width / 2),
         centerY = rect.top + (rect.height / 2);
@@ -38,7 +38,7 @@ const shiftStack = (e, vectors) => {
 
 const resetStack = () => {
   setActiveTo(false);
-  shiftAll(vectors, 0.4, -0.7);
+  shiftAll(vectors, 0, 0);
 }
 
 window.onmousemove = e => shiftStack(e, vectors);
