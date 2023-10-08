@@ -37,7 +37,7 @@ h2 {
 #container {
     height: 1024px;
     width: 1024px;
-    background: linear-gradient(180deg, #B9B4A9 13.92%, #F0FF48 89.51%);
+    background: linear-gradient(180deg, #CCC 16.21%, #F0FF48 94.35%);
     overflow: hidden;
     position: relative;
     border-radius: 0.5em;
