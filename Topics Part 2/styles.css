@@ -41,14 +41,25 @@ body {
     position: relative;
     height: 100vh; /* Set the height to 100vh for vertical centering */
     margin: 0; /* Remove default margin */
+    overflow: hidden;
+    color: white;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+video {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 h1 {
@@ -57,16 +68,48 @@ h1 {
     letter-spacing: -3px;
 }
 
+h2 {
+    line-height: 36px;
+    letter-spacing: -1px;
+    text-align: left;
+}
+
 #gallery {
     position: absolute;
-    top: 50%;
+    top: -25%;
+    /* left: -25%; */
     display: grid;
     grid-template-columns: repeat(7, 20vw);
-    grid-gap: 50px;
+    grid-gap: 200px;
     width: 100%;
     height: 100vh;
+    z-index: 2;
 }
 
 .shape {
-    padding: 1em;
+    padding: 1.5em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0.05s;
+}
+
+.blank {
+    display: none;
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+.shape:hover {
+    transform: scale(1.5);
+}
+
+button {
+    position: absolute;
+    background-color: white;
+    border-radius: 0.15em;
+    color: black;
+    font-size: 20px;
+    padding: 0.4em 1em;
 }

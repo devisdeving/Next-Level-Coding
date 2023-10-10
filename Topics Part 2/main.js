@@ -11,7 +11,6 @@ function shuffle(array) {
 
 shuffle(Array.from(shapes));
 
-// Append the shuffled grid items back to the grid container
 shapes.forEach((shape) => {
     gallery.appendChild(shape);
 });
@@ -37,6 +36,25 @@ window.onmousemove = e => {
         easing: "ease"
     })
 }
+
+  const video = document.getElementById('video');
+  
+  // Define a function to handle the mousemove event
+  function handleMouseMove(event) {
+    // Calculate the horizontal position of the mouse within the video element
+    const mouseX = event.clientX - video.getBoundingClientRect().left;
+    
+    // Calculate the percentage of the video's duration based on the mouse position
+    const percentage = (mouseX / video.clientWidth) * 100;
+    
+    // Set the video's playback position as a percentage of its duration
+    video.currentTime = (percentage / 100) * video.duration;
+  }
+  
+  // Add a mousemove event listener to the video element
+  video.addEventListener('mousemove', handleMouseMove);
+
+
 
 
 
