@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'ABCMaxiRound-Bold-Trial';
+    src: url('ABCMaxiRound-Bold-Trial.woff2') format('woff2'),
+        url('ABCMaxiRound-Bold-Trial.woff') format('woff');
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'ABCFavoritEdu-Regular';
+    src: url('ABCFavoritEdu-Regular.woff2') format('woff2'),
+        url('ABCFavoritEdu-Regular.woff') format('woff');
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: 'ABCFavoritEdu-Bold';
+    src: url('ABCFavoritEdu-Bold.woff2') format('woff2'),
+        url('ABCFavoritEdu-Bold.woff2') format('woff');
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+}
+
+:root {
+    --header-font: 'ABCMaxiRound-Bold-Trial', 'Georgia', serif;
+    --body-font: 'ABCFavoritEdu-Regular', sans-serif;
+    --bold-body-font: 'ABCFavoritEdu-Bold', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 32px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: var(--header-font);
+    font-size: 96px;
+    letter-spacing: -3px;
+}
+
+#gallery {
+    position: relative;
+}
+
+.shape {
+    position: absolute;
+    width: 288px;
+}
