@@ -77,23 +77,29 @@ h2 {
 #gallery {
     position: absolute;
     top: -25%;
-    /* left: -25%; */
-    display: grid;
+    left: -25%;
+    /* display: grid;
     grid-template-columns: repeat(7, 20vw);
-    grid-gap: 200px;
-    width: 100%;
-    height: 100vh;
+    grid-gap: 200px; */
+    width: 80vw;
+    height: 80vh;
     z-index: 2;
 }
 
 .shape {
-    padding: 1.5em;
+    padding: 8em;
     cursor: pointer;
-    transition: all 0.2s ease-in-out 0.05s;
+    position: absolute;
+    /* transition: all 0.2s ease-in-out 0.05s; */
 }
 
-.blank {
-    display: none;
+.elli {
+    position: absolute;
+    width: 100%;
+}
+
+.rect {
+    position: absolute;
     width: 100%;
 }
 
@@ -101,9 +107,9 @@ a {
     cursor: pointer;
 }
 
-.shape:hover {
+/* .shape:hover {
     transform: scale(1.5);
-}
+} */
 
 button {
     position: absolute;
