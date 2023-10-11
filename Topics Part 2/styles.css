@@ -90,26 +90,32 @@ h2 {
     padding: 8em;
     cursor: pointer;
     position: absolute;
-    /* transition: all 0.2s ease-in-out 0.05s; */
+    /* transition: all 0.5s ease-in-out 0.05s; */
 }
 
 .elli {
     position: absolute;
     width: 100%;
+    transition: all 0.5s ease-in-out 0.05s;
 }
 
 .rect {
     position: absolute;
     width: 100%;
+    transition: all 0.5s ease-in-out 0.05s;
 }
 
 a {
     cursor: pointer;
 }
 
-/* .shape:hover {
+.elli:hover {
     transform: scale(1.5);
-} */
+}
+
+.rect:hover {
+    transform: scale(1.5);
+}
 
 button {
     position: absolute;

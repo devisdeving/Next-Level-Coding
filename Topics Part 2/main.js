@@ -3,7 +3,7 @@ const shapes = document.querySelectorAll('.shape');
 
   window.onload = () => {
     shapes.forEach((shape) => {
-        const randomScale = Math.random() * (0.5 - 0.8);
+        const randomScale = Math.random() * (1 - 0.8) + 0.5;
         shape.style.transform = `scale(${randomScale})`;
     });
 };
