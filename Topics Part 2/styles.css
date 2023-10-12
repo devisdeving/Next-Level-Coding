@@ -47,7 +47,7 @@ body {
 
 header {
     display: flex;
-    align-items:baseline;
+    align-items:center;
     justify-content: space-between;
     position: relative;
     z-index: 7;
@@ -112,6 +112,7 @@ h2 {
     cursor: pointer;
     position: inherit;
     z-index: 1;
+    font-size: 32px;
 }
 
 /* #gallery {
@@ -147,7 +148,7 @@ h2 {
     position: absolute;
     z-index: 6;
     width: 100vw;
-    top: 30%;
+    top: 0%;
 }
 
 #about-text p {
@@ -204,7 +205,7 @@ button {
 
 footer p {
     color: white;
-    font-size: 0.7em;
+    font-size: 1em;
 }
 
 /* button:first-child {
