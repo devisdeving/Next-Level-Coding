@@ -45,6 +45,23 @@ body {
     color: rgb(0, 0, 0);
 }
 
+#light-up-box {
+    background-color: black;
+    border-radius: 1em;
+    padding: 1em;
+    transition: opacity 0.5s;
+    cursor: pointer;
+    position: absolute;
+    left: 38.5%;
+    top: 88%;
+    z-index: 7;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
 header {
     display: flex;
     align-items:center;
@@ -65,7 +82,7 @@ spline-viewer {
     transform: scale(1.2);
     /* left: 50%;
     transform: translate(-50%, -50%); */
-    z-index: 0;
+    z-index: 1;
 }
 
 h1 {

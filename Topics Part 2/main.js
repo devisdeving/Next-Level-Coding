@@ -11,9 +11,9 @@ let isTextVisible = true;
 function toggleTextOpacity() {
     const text = document.querySelector('header');
     if (isTextVisible) {
-        text.style.opacity = 0;
+        text.style.zIndex = 0;
     } else {
-        text.style.opacity = 1;
+        text.style.zIndex = 7;
     }
     isTextVisible = !isTextVisible;
 }
@@ -34,7 +34,16 @@ const toggleDivI = document.getElementById('index');
             targetDivA.classList.toggle('hidden');
         });
 
-
+        document.addEventListener('DOMContentLoaded', function() {
+            let divToHide = document.getElementById('light-up-box');
+        
+            if (divToHide) {
+                window.addEventListener('click', function() {
+                    divToHide.style.opacity = '0'; // Set opacity to 0 to initiate the fade-out
+                });
+            }
+        });
+        
 // const gallery = document.getElementById("gallery");
 // const shapes = document.querySelectorAll('.shape');
 
