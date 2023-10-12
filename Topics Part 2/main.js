@@ -1,23 +1,77 @@
-const gallery = document.getElementById("gallery");
-const shapes = document.querySelectorAll('.shape');
+// let header = document.querySelector('header');
 
-  window.onload = () => {
-    shapes.forEach((shape) => {
-        const randomScale = Math.random() * (1 - 0.8) + 0.5;
-        shape.style.transform = `scale(${randomScale})`;
-    });
-};
+// function changeFontColorToWhite() {
+//     header.style.opacity = '0%';
+// }
 
-shapes.forEach((shape) => {
-    const maxTop = window.innerHeight * 0.8; // 80% of the viewport's height
-    const maxLeft = window.innerWidth * 0.8; // 80% of the viewport's width
+// window.addEventListener('click', changeFontColorToWhite);
+const canvas = document.getElementById('spline')
+let isTextVisible = true;
 
-    const randomTop = Math.random() * maxTop;
-    const randomLeft = Math.random() * maxLeft;
+function toggleTextOpacity() {
+    const text = document.querySelector('header');
+    if (isTextVisible) {
+        text.style.opacity = 0;
+    } else {
+        text.style.opacity = 1;
+    }
+    isTextVisible = !isTextVisible;
+}
 
-    shape.style.top = randomTop + 'px';
-    shape.style.left = randomLeft + 'px';
-});
+window.onclick = toggleTextOpacity;
+
+const toggleDiv = document.getElementById('index');
+        const targetDiv = document.getElementById('articles');
+
+        toggleDiv.addEventListener('click', function () {
+            targetDiv.classList.toggle('hidden');
+        });
+
+
+// const gallery = document.getElementById("gallery");
+// const shapes = document.querySelectorAll('.shape');
+
+// window.onmousemove = e => {
+//     const mouseX = e.clientX,
+//           mouseY = e.clientY;
+
+//     const xDecimal = mouseX / window.innerWidth,
+//           yDecimal = mouseY / window.innerHeight;
+
+//     const maxX = gallery.offsetWidth - window.innerWidth,
+//           maxY = gallery.offsetHeight - window.innerHeight;
+
+//     const panX = gallery.offsetWidth * xDecimal * -1;
+//     const panY = gallery.offsetHeight * yDecimal * -1;
+
+//     gallery.animate({
+//         transform: `translate(${panX}px, ${panY}px)`
+//     }, {
+//         duration: 8000,
+//         fill: "forwards",
+//         easing: "ease"
+//     })
+// }
+
+// UNUSED CODE
+
+//   window.onload = () => {
+//     shapes.forEach((shape) => {
+//         const randomScale = Math.random() * (1 - 0.8) + 0.5;
+//         shape.style.transform = `scale(${randomScale})`;
+//     });
+// };
+
+// shapes.forEach((shape) => {
+//     const maxTop = window.innerHeight * 0.8; // 80% of the viewport's height
+//     const maxLeft = window.innerWidth * 0.8; // 80% of the viewport's width
+
+//     const randomTop = Math.random() * maxTop;
+//     const randomLeft = Math.random() * maxLeft;
+
+//     shape.style.top = randomTop + 'px';
+//     shape.style.left = randomLeft + 'px';
+// });
 
 
 //   const video = document.getElementById('video');
@@ -53,26 +107,4 @@ shapes.forEach((shape) => {
 // shapes.forEach((shape) => {
 //     gallery.appendChild(shape);
 // });
-
-// window.onmousemove = e => {
-//     const mouseX = e.clientX,
-//           mouseY = e.clientY;
-
-//     const xDecimal = mouseX / window.innerWidth,
-//           yDecimal = mouseY / window.innerHeight;
-
-//     const maxX = gallery.offsetWidth - window.innerWidth,
-//           maxY = gallery.offsetHeight - window.innerHeight;
-
-//     const panX = gallery.offsetWidth * xDecimal * -1;
-//     const panY = gallery.offsetHeight * yDecimal * -1;
-
-//     gallery.animate({
-//         transform: `translate(${panX}px, ${panY}px)`
-//     }, {
-//         duration: 8000,
-//         fill: "forwards",
-//         easing: "ease"
-//     })
-// }
 
