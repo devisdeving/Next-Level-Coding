@@ -20,11 +20,18 @@ function toggleTextOpacity() {
 
 window.onclick = toggleTextOpacity;
 
-const toggleDiv = document.getElementById('index');
-        const targetDiv = document.getElementById('articles');
+const toggleDivI = document.getElementById('index');
+        const targetDivI = document.getElementById('articles');
 
-        toggleDiv.addEventListener('click', function () {
-            targetDiv.classList.toggle('hidden');
+        toggleDivI.addEventListener('click', function () {
+            targetDivI.classList.toggle('hidden');
+        });
+
+        const toggleDivA = document.getElementById('about');
+        const targetDivA = document.getElementById('about-text');
+
+        toggleDivA.addEventListener('click', function () {
+            targetDivA.classList.toggle('hidden');
         });
 
 
