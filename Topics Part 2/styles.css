@@ -123,12 +123,12 @@ h2 {
     z-index: 4;
 } */
 
-.shape {
+/* .shape {
     padding: 8em;
     cursor: pointer;
     position: absolute;
-    /* transition: all 0.5s ease-in-out 0.05s; */
-}
+    transition: all 0.5s ease-in-out 0.05s; 
+} */
 
 #articles {
     padding: 3em 2em;
