@@ -33,7 +33,7 @@
 
 body {
     font-family: var(--body-font);
-    font-size: 28px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,9 +70,9 @@ spline-viewer {
 
 h1 {
     font-family: var(--header-font);
-    font-size: 96px;
+    font-size: 81px;
     letter-spacing: -3px;
-    line-height: 80px;
+    line-height: 72px;
     position: relative;
     z-index: 1;
     color: #EF36FF;
@@ -204,7 +204,7 @@ button {
 
 footer p {
     color: white;
-    font-size: 1em;
+    font-size: 0.7em;
 }
 
 /* button:first-child {
