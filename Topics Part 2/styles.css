@@ -33,7 +33,7 @@
 
 body {
     font-family: var(--body-font);
-    font-size: 32px;
+    font-size: 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,6 +73,17 @@ h1 {
     font-size: 96px;
     letter-spacing: -3px;
     line-height: 80px;
+    position: relative;
+    z-index: 1;
+    color: #EF36FF;
+}
+
+.h1-div img {
+    object-fit: cover;
+    width: 20%;
+    position: absolute;
+    z-index: 0;
+    top: -30%;
 }
 
 h2 {
@@ -84,11 +95,23 @@ h2 {
 .links {
     text-decoration: solid;
     display: flex;
+    position: relative;
+    color: #00D37B;
+}
+
+.links img {
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: -120%;
 }
 
 .links p {
     margin: 1em;
     cursor: pointer;
+    position: inherit;
+    z-index: 1;
 }
 
 /* #gallery {
@@ -108,23 +131,23 @@ h2 {
 }
 
 #articles {
-    font-size: 36px;
     padding: 3em 2em;
     position: absolute;
     z-index: 5;
     width: 100vw;
+    top: -10%;
 }
 
 #articles div {
-    margin: 0.2em 0.5em;
+    margin: 2.2em 0.5em;
 }
 
 #about-text {
-    font-size: 36px;
     padding: 3em 2em;
     position: absolute;
     z-index: 6;
     width: 100vw;
+    top: 30%;
 }
 
 #about-text p {
@@ -143,22 +166,24 @@ section {
 .hidden {
     display: none;
 }
-/* 
-.index-button:nth-child(odd) {
-    border-radius: 50%;
-    background-color: #EF36FF;
-    display: flex;
+
+.right p:nth-child(odd):hover, .left p:nth-child(2):hover {
+    /* border-radius: 50%; */
+    color: #EF36FF;
+    text-decoration: underline;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
-.index-button:nth-child(even) {
-    border-radius: 0.4em;
-    background-color: #00D37B;
-    display: flex;
+.right p:nth-child(2):hover, .left p:nth-child(odd):hover {
+    /* border-radius: 0.4em; */
+    color: #00D37B;
+    text-decoration: underline;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-} */
+    align-items: center; */
+}
 
 footer {
     display: flex;
@@ -167,7 +192,7 @@ footer {
     position: absolute;
     z-index: 5;
     top: 90%;
-    width: 50%;
+    width: 60%;
 }
 
 button {
@@ -175,6 +200,11 @@ button {
     margin: 0 2em;
     padding: 0.5em 0.8em;
     border-radius: 2em;
+}
+
+footer p {
+    color: white;
+    font-size: 1em;
 }
 
 /* button:first-child {
