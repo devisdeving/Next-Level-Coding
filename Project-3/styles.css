@@ -1,0 +1,19 @@
+#container {
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ripple2, #ripple3 {
+    width: 86%;
+    transform: scaleX(100%);
+    margin: -0.5em;
+}
+
+#ripple1, #ripple4 {
+    width: 63%;
+    transform: scaleX(100%);
+}
