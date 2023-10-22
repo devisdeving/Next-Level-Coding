@@ -1,31 +1,21 @@
-const url = 'https://spotify23.p.rapidapi.com/artist_singles/?id=2w9zwq3AktTeYYMuhMjju8&offset=0&limit=20';
+const url = 'https://api.spotify.com/v1/tracks/4heve4ydl1u6V3AD4moZq9';
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '3a5bbb1dd7mshffb5b1fd5cb1d64p1a7b82jsn5c555b7faa62',
-        'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+        'Authorization': 'Bearer 1POdFZRZbvb...qqillRxMr2z'
     }
 };
 
 fetch(url, options)
     .then(function (response) {
-        return response.json();
+        return response.text();
     })
-    .then(function (result) {
-        console.log(result);
-        const windDeg = data.current.wind_degree;
-        const windSpeed = data.current.wind_mph;
-
-        const windDegStyle = map(windDeg, 0, 360, -70, 70);
-        const windSpeedStyle = map(windSpeed, 0, 80, 0, 15);
-
-        console.log(windDeg, windSpeed);
-
-        logoElem.style.transform = `skew(${windDegStyle}deg)`;
-        logoElem.style.filter = `blur(${windSpeedStyle}px)`;
+    .then(function (data) {
+        console.log(data);
+        // Handle the data here
     })
     .catch(function (error) {
-        console.error(error);
+        console.error("Something went wrong!", error);
     });
 
 
