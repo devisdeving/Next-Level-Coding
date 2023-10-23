@@ -4,14 +4,9 @@ const ripple3 = document.getElementById('ripple3');
 const ripple4 = document.getElementById('ripple4');
 const disc = document.getElementById('disc');
 const container = document.getElementById('container')
-// const artistName = document.getElementById('artistName');
-// const monthlyListeners = document.getElementById('monthlyListeners');
-// const issueNo = document.getElementById('issueNo');
-// const dateIssued = document.getElementById('dateIssued');
-// const artistImage = document.getElementById('artistImage')
 const info = document.getElementById('info');
 
-const set =
+const set =[
     {
         artistName: "LP Giobbi",
         mL: 3934806,
@@ -27,76 +22,96 @@ const set =
         issueNo: 129,
         src: "artistImages/lPGiobbi.png",
         fill: "#ac9c2a"
-    };
-    // {
-    //     artistName: "Aluna",
-    //     mL: 4229523,
-    //     song1: "Beggin'",
-    //     song1Streams: 30797317,
-    //     song2: "Forget About Me",
-    //     song2Streams: 30167368,
-    //     song3: "Body Pump - Lady Bee Remix",
-    //     song3Streams: 18736101,
-    //     song4: "More Baby",
-    //     song4Streams: 4232323
-    // },
-    // {
-    //     artistName: "Zeds Dead",
-    //     mL: 2360883,
-    //     song1: "Eyes On Fire - Zeds Dead Remix'",
-    //     song1Streams: 53597365,
-    //     song2: "Alive",
-    //     song2Streams: 30643625,
-    //     song3: "Gassed Up",
-    //     song3Streams: 15502516,
-    //     song4: "One Three Nine",
-    //     song4Streams: 8863126
-    // }
+    },
+    {
+        artistName: "Aluna",
+        mL: 4229523,
+        song1: "Beggin'",
+        song1Streams: 30797317,
+        song2: "Forget About Me",
+        song2Streams: 30167368,
+        song3: "Body Pump - Lady Bee Remix",
+        song3Streams: 18736101,
+        song4: "More Baby",
+        song4Streams: 4232323,
+        dateIssued: "April 2022",
+        issueNo: 113,
+        src: "artistImages/aluna.png",
+        fill: "#ac9c2a"
+    },
+    {
+        artistName: "Zeds Dead",
+        mL: 2360883,
+        song1: "Eyes On Fire - Zeds Dead Remix'",
+        song1Streams: 53597365,
+        song2: "Alive",
+        song2Streams: 30643625,
+        song3: "Gassed Up",
+        song3Streams: 15502516,
+        song4: "One Three Nine",
+        song4Streams: 8863126,
+        dateIssued: "July 2019",
+        issueNo: 60,
+        src: "artistImages/zedsDead.png",
+        fill: "#ac9c2a"
+    }];
 
-function customLogo() {
-
-    const monthly = set.mL / 70000;
-    const songOneStreams = set.song1Streams / 200000;
-    const songTwoStreams = set.song2Streams / 200000;
-    const songThreeStreams = set.song3Streams / 200000;
-    const songFourStreams = set.song4Streams / 200000;
-
-    const songOneStreamsStyle = map(songOneStreams, 0, 100, 80, 140);
-    const songTwoStreamsStyle = map(songTwoStreams, 0, 100, 80, 140);
-    const songThreeStreamsStyle = map(songThreeStreams, 0, 100, 80, 140);
-    const songFourStreamsStyle = map(songFourStreams, 0, 100, 80, 140);
-    const monthlyStyle = map(monthly, 0, 100, 80, 140);
-
-    ripple1.style.transform = `scaleX(${songOneStreamsStyle}%)`;
-    ripple2.style.transform = `scaleX(${songTwoStreamsStyle}%)`;
-    ripple3.style.transform = `scaleX(${songThreeStreamsStyle}%)`;
-    ripple4.style.transform = `scaleX(${songFourStreamsStyle}%)`;
-    disc.style.transform = `scale(${monthlyStyle}%)`;
-    document.body.style.backgroundColor = `${set.fill}`;
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
     
-};
+    // Shuffle the array
+    shuffleArray(set);
+    
+    // Select the first object in the shuffled array
+    const selectedObject = set[0];
 
-customLogo();
+    console.log(selectedObject.artistName);
 
-function map(value, low1, high1, low2, high2) {
-        return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
-    };
+// function customLogo() {
 
+//     const monthly = selectedObject.mL / 70000;
+//     const songOneStreams = selectedObject.song1Streams / 200000;
+//     const songTwoStreams = selectedObject.song2Streams / 200000;
+//     const songThreeStreams = selectedObject.song3Streams / 200000;
+//     const songFourStreams = selectedObject.song4Streams / 200000;
 
+//     const songOneStreamsStyle = map(songOneStreams, 0, 100, 80, 140);
+//     const songTwoStreamsStyle = map(songTwoStreams, 0, 100, 80, 140);
+//     const songThreeStreamsStyle = map(songThreeStreams, 0, 100, 80, 140);
+//     const songFourStreamsStyle = map(songFourStreams, 0, 100, 80, 140);
+//     const monthlyStyle = map(monthly, 0, 100, 80, 140);
 
-    const artistInfoSkeleton = `
-    <p>Artist Name</p>
-    <h2>${set.artistName}</h2>
-        <p>Monthly Listeners</p>
-        <h2>${set.mL}</h2>
-        <p>Issue #</p>
-        <h2>${set.issueNo}</h2>
-        <p>Date Issued</p>
-        <h2>${set.dateIssued}</h2>
-        <img id="artistImage" src="${set.src}" alt="Artist Image">
-    `;
+//     ripple1.style.transform = `scaleX(${songOneStreamsStyle}%)`;
+//     ripple2.style.transform = `scaleX(${songTwoStreamsStyle}%)`;
+//     ripple3.style.transform = `scaleX(${songThreeStreamsStyle}%)`;
+//     ripple4.style.transform = `scaleX(${songFourStreamsStyle}%)`;
+//     disc.style.transform = `scale(${monthlyStyle}%)`;
+//     document.body.style.backgroundColor = `${set.fill}`;
+// };
 
-info.innerHTML = artistInfoSkeleton;
+// customLogo();
+
+// function map(value, low1, high1, low2, high2) {
+//         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+//     };
+
+//     const artistInfoSkeleton = `
+//     <p>Artist Name</p>
+//     <h2>${set.artistName}</h2>
+//         <p>Monthly Listeners</p>
+//         <h2>${set.mL}</h2>
+//         <p>Issue #</p>
+//         <h2>${set.issueNo}</h2>
+//         <p>Date Issued</p>
+//         <h2>${set.dateIssued}</h2>
+//         <img id="artistImage" src="${set.src}" alt="Artist Image">
+//     `;
+
+// info.innerHTML = artistInfoSkeleton;
 
 // SPOTIFY API ATTEMPT  
 // const url = 'https://api.spotify.com/v1/tracks/4heve4ydl1u6V3AD4moZq9';
