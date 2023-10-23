@@ -54,9 +54,73 @@ const set =[
         issueNo: 60,
         src: "artistImages/zedsDead.png",
         fill: "#ac9c2a"
+    },    
+    {
+        artistName: "Flume",
+        mL: 10092810,
+        song1: "Never Be Like You (feat. Kai)",
+        song1Streams: 708659231,
+        song2: "You & Me - Flume Remix",
+        song2Streams: 591741788,
+        song3: "Say It (feat. Tove Lo)",
+        song3Streams: 376302619,
+        song4: "Drop The Game",
+        song4Streams: 289477592,
+        dateIssued: "May 2022",
+        issueNo: 114,
+        src: "artistImages/flume.png",
+        fill: "#ac9c2a"
+    },
+    {
+        artistName: "FISHER",
+        mL: 10502570,
+        song1: "Losing It",
+        song1Streams: 478641567,
+        song2: "Stop It",
+        song2Streams: 144451558,
+        song3: "World, Hold On - FISHER Rework",
+        song3Streams: 137248923,
+        song4: "TAKE IT OFF",
+        song4Streams: 35300239,
+        dateIssued: "March 2019",
+        issueNo: 591,
+        src: "artistImages/fisher.png",
+        fill: "#ac9c2a"
+    },    
+    {
+        artistName: "SOPHIE",
+        mL: 460734,
+        song1: "Immaterial",
+        song1Streams: 27001095,
+        song2: "Faceshopping",
+        song2Streams: 12499411,
+        song3: "Ponyboy",
+        song3Streams: 10658460,
+        song4: "Sweat - SOPHIE Remix",
+        song4Streams: 7167395,
+        dateIssued: "July 2019",
+        issueNo: 595,
+        src: "artistImages/sophie.png",
+        fill: "#ac9c2a"
+    },
+    {
+        artistName: "WHIPPED CREAM",
+        mL: 878208,
+        song1: "Light of Mine",
+        song1Streams: 8751796,
+        song2: "Be Here (La La La)",
+        song2Streams: 5868807,
+        song3: "All Eyes On Me",
+        song3Streams: 4818570,
+        song4: "Rewind.. (But I Love You)",
+        song4Streams: 3554881,
+        dateIssued: "February 2023",
+        issueNo: 123,
+        src: "artistImages/whippedCream.png",
+        fill: "#ac9c2a"
     }];
 
-	let lastObject = null;
+    let lastObject = null;
   
   function getRandomObject(objects, lastObject) {
 	let object = lastObject;
@@ -72,25 +136,41 @@ const selectedObject = getRandomObject(set, lastObject);
 
 function customLogo() {
 
-    const monthly = selectedObject.mL / 70000;
-    const songOneStreams = selectedObject.song1Streams / 150000;
-    const songTwoStreams = selectedObject.song2Streams / 150000;
-    const songThreeStreams = selectedObject.song3Streams / 150000;
-    const songFourStreams = selectedObject.song4Streams / 150000;
+    const monthly = selectedObject.mL / 500000;
+    let songOneStreams = selectedObject.song1Streams;
+    let songTwoStreams = selectedObject.song2Streams;
+    let songThreeStreams = selectedObject.song3Streams;
+    let songFourStreams = selectedObject.song4Streams;
+    const totalStreams = songOneStreams + songTwoStreams + songThreeStreams + songFourStreams;
 
-    const songOneStreamsStyle = map(songOneStreams, 0, 400, 40, 200);
-    const songTwoStreamsStyle = map(songTwoStreams, 0, 400, 40, 200);
-    const songThreeStreamsStyle = map(songThreeStreams, 0, 400, 40, 200);
-    const songFourStreamsStyle = map(songFourStreams, 0, 400, 40, 200);
-    const monthlyStyle = map(monthly, 0, 400, 60, 160);
+    console.log(totalStreams);
 
-    ripple1.style.transform = `scaleX(${songOneStreamsStyle}%)`;
-    ripple2.style.transform = `scaleX(${songTwoStreamsStyle}%)`;
-    ripple3.style.transform = `scaleX(${songThreeStreamsStyle}%)`;
-    ripple4.style.transform = `scaleX(${songFourStreamsStyle}%)`;
+    const songOneStreamsStyle = songOneStreams * 100 / totalStreams;
+    const songTwoStreamsStyle = songTwoStreams * 100 / totalStreams;
+    const songThreeStreamsStyle = songThreeStreams * 100 / totalStreams;
+    const songFourStreamsStyle = songFourStreams * 100 / totalStreams;
+    const monthlyStyle = map(monthly, 0, 2000, 60, 160);
+
+    console.log(songFourStreamsStyle);
+    console.log(songOneStreamsStyle);
+
+    // const songOneStreamsStyle = map(songOneStreams, 0, 1000, 20, 200);
+    // const songTwoStreamsStyle = map(songTwoStreams, 0, 1000, 20, 200);
+    // const songThreeStreamsStyle = map(songThreeStreams, 0, 1000, 20, 200);
+    // const songFourStreamsStyle = map(songFourStreams, 0, 1000, 20, 200);
+    // const monthlyStyle = map(monthly, 0, 2000, 60, 160);
+
+    // ripple1.style.transform = `scaleX(${songOneStreamsStyle}%)`;
+    // ripple2.style.transform = `scaleX(${songTwoStreamsStyle}%)`;
+    // ripple3.style.transform = `scaleX(${songThreeStreamsStyle}%)`;
+    // ripple4.style.transform = `scaleX(${songFourStreamsStyle}%)`;
+    ripple1.style.width = `${songOneStreamsStyle}%`;
+    ripple2.style.width = `${songTwoStreamsStyle}%`;
+    ripple3.style.width = `${songThreeStreamsStyle}%`;
+    ripple4.style.width = `${songFourStreamsStyle}%`;
     
     disc.style.transform = `scale(${monthlyStyle}%)`;
-    document.body.style.backgroundColor = `${set.fill}`;
+    container.style.transform = `scale(${monthlyStyle}% * 2)`;
 
     // ripple1.style.backgroundImage = `url('${selectedObject.src}')`;
     // ripple2.style.backgroundImage = `url('${selectedObject.src}')`;
