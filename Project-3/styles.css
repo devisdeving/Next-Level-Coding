@@ -24,13 +24,13 @@
 body {
     display: flex;
     margin: 2em;
-    background-color: rgb(14, 14, 14);
-    color: white;
+    background-color: #f0f0f0;
+    color: rgb(0, 0, 0);
     font-family: var(--font);
 }
 
 #left {
-    background-color: rgb(31, 31, 31);
+    background-color: #ffffff;
     padding: 1em;
     border-radius: 0.5em;
     width: max-content;

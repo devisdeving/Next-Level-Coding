@@ -3,6 +3,7 @@ const ripple2 = document.getElementById('ripple2');
 const ripple3 = document.getElementById('ripple3');
 const ripple4 = document.getElementById('ripple4');
 const disc = document.getElementById('disc');
+const container = document.getElementById('container')
 // const artistName = document.getElementById('artistName');
 // const monthlyListeners = document.getElementById('monthlyListeners');
 // const issueNo = document.getElementById('issueNo');
@@ -24,7 +25,8 @@ const set =
         song4Streams: 5387629,
         dateIssued: "August 2023",
         issueNo: 129,
-        src: "artistImages/lPGiobbi.png"
+        src: "artistImages/lPGiobbi.png",
+        fill: "#ac9c2a"
     };
     // {
     //     artistName: "Aluna",
@@ -51,7 +53,7 @@ const set =
     //     song4Streams: 8863126
     // }
 
-function e() {
+function customLogo() {
 
     const monthly = set.mL / 70000;
     const songOneStreams = set.song1Streams / 200000;
@@ -70,13 +72,16 @@ function e() {
     ripple3.style.transform = `scaleX(${songThreeStreamsStyle}%)`;
     ripple4.style.transform = `scaleX(${songFourStreamsStyle}%)`;
     disc.style.transform = `scale(${monthlyStyle}%)`;
+    document.body.style.backgroundColor = `${set.fill}`;
+    
 };
 
-e();
+customLogo();
 
 function map(value, low1, high1, low2, high2) {
         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
     };
+
 
 
     const artistInfoSkeleton = `
