@@ -51,19 +51,24 @@ p {
 
 #artistImage {
     width: 20vw;
+    aspect-ratio: 1;
     object-fit: cover;
     margin-top: 1em;
     border-radius: 0.25em;
 }
 
 #container {
-    width: 800px;
+    width: 50vw;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-left: 11em;
+}
+
+#disc {
+    margin: -2.5em auto;
 }
 
 #ripple2, #ripple3 {

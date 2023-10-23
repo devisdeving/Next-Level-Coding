@@ -56,62 +56,68 @@ const set =[
         fill: "#ac9c2a"
     }];
 
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    }
-    
-    // Shuffle the array
-    shuffleArray(set);
-    
-    // Select the first object in the shuffled array
-    const selectedObject = set[0];
+	let lastObject = null;
+  
+  function getRandomObject(objects, lastObject) {
+	let object = lastObject;
+	while (object === lastObject) {
+	  object = objects[Math.floor(Math.random() * objects.length)];
+	}
+	return object;
+}
+
+const selectedObject = getRandomObject(set, lastObject);
 
     console.log(selectedObject.artistName);
 
-// function customLogo() {
+function customLogo() {
 
-//     const monthly = selectedObject.mL / 70000;
-//     const songOneStreams = selectedObject.song1Streams / 200000;
-//     const songTwoStreams = selectedObject.song2Streams / 200000;
-//     const songThreeStreams = selectedObject.song3Streams / 200000;
-//     const songFourStreams = selectedObject.song4Streams / 200000;
+    const monthly = selectedObject.mL / 70000;
+    const songOneStreams = selectedObject.song1Streams / 150000;
+    const songTwoStreams = selectedObject.song2Streams / 150000;
+    const songThreeStreams = selectedObject.song3Streams / 150000;
+    const songFourStreams = selectedObject.song4Streams / 150000;
 
-//     const songOneStreamsStyle = map(songOneStreams, 0, 100, 80, 140);
-//     const songTwoStreamsStyle = map(songTwoStreams, 0, 100, 80, 140);
-//     const songThreeStreamsStyle = map(songThreeStreams, 0, 100, 80, 140);
-//     const songFourStreamsStyle = map(songFourStreams, 0, 100, 80, 140);
-//     const monthlyStyle = map(monthly, 0, 100, 80, 140);
+    const songOneStreamsStyle = map(songOneStreams, 0, 400, 40, 200);
+    const songTwoStreamsStyle = map(songTwoStreams, 0, 400, 40, 200);
+    const songThreeStreamsStyle = map(songThreeStreams, 0, 400, 40, 200);
+    const songFourStreamsStyle = map(songFourStreams, 0, 400, 40, 200);
+    const monthlyStyle = map(monthly, 0, 400, 60, 160);
 
-//     ripple1.style.transform = `scaleX(${songOneStreamsStyle}%)`;
-//     ripple2.style.transform = `scaleX(${songTwoStreamsStyle}%)`;
-//     ripple3.style.transform = `scaleX(${songThreeStreamsStyle}%)`;
-//     ripple4.style.transform = `scaleX(${songFourStreamsStyle}%)`;
-//     disc.style.transform = `scale(${monthlyStyle}%)`;
-//     document.body.style.backgroundColor = `${set.fill}`;
-// };
+    ripple1.style.transform = `scaleX(${songOneStreamsStyle}%)`;
+    ripple2.style.transform = `scaleX(${songTwoStreamsStyle}%)`;
+    ripple3.style.transform = `scaleX(${songThreeStreamsStyle}%)`;
+    ripple4.style.transform = `scaleX(${songFourStreamsStyle}%)`;
+    
+    disc.style.transform = `scale(${monthlyStyle}%)`;
+    document.body.style.backgroundColor = `${set.fill}`;
 
-// customLogo();
+    // ripple1.style.backgroundImage = `url('${selectedObject.src}')`;
+    // ripple2.style.backgroundImage = `url('${selectedObject.src}')`;
+    // ripple3.style.backgroundImage = `url('${selectedObject.src}')`;
+    // ripple4.style.backgroundImage = `url('${selectedObject.src}')`;
+    // disc.style.backgroundImage = `url('${selectedObject.src}')`;
+};
 
-// function map(value, low1, high1, low2, high2) {
-//         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
-//     };
+customLogo();
 
-//     const artistInfoSkeleton = `
-//     <p>Artist Name</p>
-//     <h2>${set.artistName}</h2>
-//         <p>Monthly Listeners</p>
-//         <h2>${set.mL}</h2>
-//         <p>Issue #</p>
-//         <h2>${set.issueNo}</h2>
-//         <p>Date Issued</p>
-//         <h2>${set.dateIssued}</h2>
-//         <img id="artistImage" src="${set.src}" alt="Artist Image">
-//     `;
+function map(value, low1, high1, low2, high2) {
+        return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+    };
 
-// info.innerHTML = artistInfoSkeleton;
+    const artistInfoSkeleton = `
+    <p>Artist Name</p>
+    <h2>${selectedObject.artistName}</h2>
+        <p>Monthly Listeners</p>
+        <h2>${selectedObject.mL}</h2>
+        <p>Issue #</p>
+        <h2>${selectedObject.issueNo}</h2>
+        <p>Date Issued</p>
+        <h2>${selectedObject.dateIssued}</h2>
+        <img id="artistImage" src="${selectedObject.src}" alt="Artist Image">
+    `;
+
+info.innerHTML = artistInfoSkeleton;
 
 // SPOTIFY API ATTEMPT  
 // const url = 'https://api.spotify.com/v1/tracks/4heve4ydl1u6V3AD4moZq9';
