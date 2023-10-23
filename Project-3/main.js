@@ -3,6 +3,12 @@ const ripple2 = document.getElementById('ripple2');
 const ripple3 = document.getElementById('ripple3');
 const ripple4 = document.getElementById('ripple4');
 const disc = document.getElementById('disc');
+// const artistName = document.getElementById('artistName');
+// const monthlyListeners = document.getElementById('monthlyListeners');
+// const issueNo = document.getElementById('issueNo');
+// const dateIssued = document.getElementById('dateIssued');
+// const artistImage = document.getElementById('artistImage')
+const info = document.getElementById('info');
 
 const set =
     {
@@ -15,7 +21,10 @@ const set =
         song3: "All In A Dream",
         song3Streams: 14584852,
         song4: "Can't Let You Go",
-        song4Streams: 5387629
+        song4Streams: 5387629,
+        dateIssued: "August 2023",
+        issueNo: 129,
+        src: "artistImages/lPGiobbi.png"
     };
     // {
     //     artistName: "Aluna",
@@ -65,10 +74,24 @@ function e() {
 
 e();
 
-    function map(value, low1, high1, low2, high2) {
+function map(value, low1, high1, low2, high2) {
         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
-    }
+    };
 
+
+    const artistInfoSkeleton = `
+    <p>Artist Name</p>
+    <h2>${set.artistName}</h2>
+        <p>Monthly Listeners</p>
+        <h2>${set.mL}</h2>
+        <p>Issue #</p>
+        <h2>${set.issueNo}</h2>
+        <p>Date Issued</p>
+        <h2>${set.dateIssued}</h2>
+        <img id="artistImage" src="${set.src}" alt="Artist Image">
+    `;
+
+info.innerHTML = artistInfoSkeleton;
 
 // SPOTIFY API ATTEMPT  
 // const url = 'https://api.spotify.com/v1/tracks/4heve4ydl1u6V3AD4moZq9';
