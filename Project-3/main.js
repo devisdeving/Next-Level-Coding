@@ -5,6 +5,7 @@ const ripple4 = document.getElementById('ripple4');
 const disc = document.getElementById('disc');
 const container = document.getElementById('container')
 const info = document.getElementById('info');
+const right = document.getElementById('right');
 
 const set =[
     {
@@ -28,7 +29,7 @@ const set =[
         dateIssued: "August 2023",
         issueNo: 129,
         src: "artistImages/lPGiobbi.png",
-        fill: "#ac9c2a"
+        fill: "#603F15"
     },
     {
         artistName: "Aluna",
@@ -51,7 +52,7 @@ const set =[
         dateIssued: "April 2022",
         issueNo: 113,
         src: "artistImages/aluna.png",
-        fill: "#ac9c2a"
+        fill: "#48B2FF"
     },
     {
         artistName: "Zeds Dead",
@@ -74,7 +75,7 @@ const set =[
         dateIssued: "July 2019",
         issueNo: 60,
         src: "artistImages/zedsDead.png",
-        fill: "#ac9c2a"
+        fill: "#4EB8C9"
     },    
     {
         artistName: "Flume",
@@ -97,7 +98,7 @@ const set =[
         dateIssued: "May 2022",
         issueNo: 114,
         src: "artistImages/flume.png",
-        fill: "#ac9c2a"
+        fill: "#F27B38"
     },
     {
         artistName: "FISHER",
@@ -120,7 +121,7 @@ const set =[
         dateIssued: "March 2019",
         issueNo: 591,
         src: "artistImages/fisher.png",
-        fill: "#ac9c2a"
+        fill: "#013C66"
     },    
     {
         artistName: "SOPHIE",
@@ -143,7 +144,7 @@ const set =[
         dateIssued: "July 2019",
         issueNo: 595,
         src: "artistImages/sophie.png",
-        fill: "#ac9c2a"
+        fill: "#51095C"
     },
     {
         artistName: "WHIPPED CREAM",
@@ -166,7 +167,7 @@ const set =[
         dateIssued: "February 2023",
         issueNo: 123,
         src: "artistImages/whippedCream.png",
-        fill: "#ac9c2a"
+        fill: "#57000B"
     }
 ];
 
@@ -174,15 +175,7 @@ const set =[
 console.log(set);
 
 let selectedIndex = getIndex(set);
- console.log(selectedIndex);
- 
-// let tracks = [selectedIndex.songs[0].streams, selectedIndex.songs[1].streams, selectedIndex.songs[2].streams, selectedIndex.songs[3].streams];
-// shuffle(tracks);
 
-// let shuffledTracks = getIndex(tracks);
-// const randomSelectedTrack = tracks[selectedIndex];
-
-// let currentIndex = selectedIndex;
 const randomSelectedObject = randomFromArray(set);
 const songs = randomSelectedObject.songs;
 
@@ -218,6 +211,7 @@ function customLogo(selectedObject) {
     
     disc.style.transform = `scale(${monthlyStyle}%)`;
     container.style.transform = `scale(${monthlyStyle}% * 2)`;
+    right.style.backgroundColor = selectedObject.fill;
 
     // ripple1.style.backgroundImage = `url('${selectedObject.src}')`;
     // ripple2.style.backgroundImage = `url('${selectedObject.src}')`;
@@ -239,6 +233,13 @@ function customLogo(selectedObject) {
 
     info.innerHTML = artistInfoSkeleton;
 };
+
+const button = document.getElementById('button');
+
+button.addEventListener('click', function () {
+    location.reload(); // Reloads the page
+  });
+  
 
 function map(value, low1, high1, low2, high2) {
         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
