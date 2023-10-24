@@ -118,24 +118,22 @@ const set =[
         issueNo: 123,
         src: "artistImages/whippedCream.png",
         fill: "#ac9c2a"
-    }];
+    }
+];
 
-    let lastObject = null;
   
-  function getRandomObject(objects, lastObject) {
-	let object = lastObject;
-	while (object === lastObject) {
-	  object = objects[Math.floor(Math.random() * objects.length)];
-	}
-	return object;
+function getRandomObjectIndex(objects) {
+	return Math.floor(Math.random() * objects.length);
 }
 
-const selectedObject = getRandomObject(set, lastObject);
+let randomSelectedIndex = getRandomObjectIndex(set);
+let currentIndex = randomSelectedIndex;
+const randomSelectedObject = set[randomSelectedIndex];
+customLogo(randomSelectedObject);
+    //console.log(selectedObject.artistName);
 
-    console.log(selectedObject.artistName);
-
-function customLogo() {
-
+function customLogo(selectedObject) {
+    console.log(selectedObject)
     const monthly = selectedObject.mL / 500000;
     let songOneStreams = selectedObject.song1Streams;
     let songTwoStreams = selectedObject.song2Streams;
@@ -145,11 +143,11 @@ function customLogo() {
 
     console.log(totalStreams);
 
-    const songOneStreamsStyle = songOneStreams * 100 / totalStreams;
-    const songTwoStreamsStyle = songTwoStreams * 100 / totalStreams;
-    const songThreeStreamsStyle = songThreeStreams * 100 / totalStreams;
-    const songFourStreamsStyle = songFourStreams * 100 / totalStreams;
-    const monthlyStyle = map(monthly, 0, 2000, 60, 160);
+    const songOneStreamsStyle = songOneStreams * 150 / totalStreams;
+    const songTwoStreamsStyle = songTwoStreams * 150 / totalStreams;
+    const songThreeStreamsStyle = songThreeStreams * 150 / totalStreams;
+    const songFourStreamsStyle = songFourStreams * 150 / totalStreams;
+    const monthlyStyle = map(monthly, 0, 2000, 60, 100);
 
     console.log(songFourStreamsStyle);
     console.log(songOneStreamsStyle);
@@ -177,13 +175,6 @@ function customLogo() {
     // ripple3.style.backgroundImage = `url('${selectedObject.src}')`;
     // ripple4.style.backgroundImage = `url('${selectedObject.src}')`;
     // disc.style.backgroundImage = `url('${selectedObject.src}')`;
-};
-
-customLogo();
-
-function map(value, low1, high1, low2, high2) {
-        return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
-    };
 
     const artistInfoSkeleton = `
     <p>Artist Name</p>
@@ -197,7 +188,14 @@ function map(value, low1, high1, low2, high2) {
         <img id="artistImage" src="${selectedObject.src}" alt="Artist Image">
     `;
 
-info.innerHTML = artistInfoSkeleton;
+    info.innerHTML = artistInfoSkeleton;
+};
+
+function map(value, low1, high1, low2, high2) {
+        return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+    };
+
+
 
 // SPOTIFY API ATTEMPT  
 // const url = 'https://api.spotify.com/v1/tracks/4heve4ydl1u6V3AD4moZq9';

@@ -50,6 +50,7 @@ p {
     font-family: var(--caption-font);
     margin-bottom: -5px;
     margin-top: 15px;
+    font-size: small;
 }
 
 #artistImage {
@@ -80,6 +81,7 @@ p {
     align-items: center;
     justify-content: center;
     padding: 1em;
+    animation: floating 2s ease-in-out infinite;
 }
 
 #disc {
@@ -101,4 +103,26 @@ p {
     margin-bottom: -0.3em;
     margin-top: -0.3em;
     padding: 0.25em;
+}
+
+#button {
+    font-family: var(--caption-font);
+    cursor: pointer;
+    font-size: small;
+    /* background-color: black;
+    color: white;
+    padding: 0.5em 0.25em;
+    border-radius: var(--border-radius); */
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
