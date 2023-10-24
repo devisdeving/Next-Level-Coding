@@ -118,15 +118,48 @@ const set =[
         issueNo: 123,
         src: "artistImages/whippedCream.png",
         fill: "#ac9c2a"
+    },
+    {
+        artistName: "WHIPPED CREAM",
+        mL: 878208,
+        songs: [
+            {
+                song: "Light of Mine",
+                streams: 8751796
+            }, {
+                song: "Light of Mine",
+                streams: 8751796
+            }, {
+                song: "Light of Mine",
+                streams: 8751796
+            }
+        ],
+        // song1: "Light of Mine",
+        // song1Streams: 8751796,
+        // song2: "Be Here (La La La)",
+        // song2Streams: 5868807,
+        // song3: "All Eyes On Me",
+        // song3Streams: 4818570,
+        // song4: "Rewind.. (But I Love You)",
+        // song4Streams: 3554881,
+        dateIssued: "February 2023",
+        issueNo: 123,
+        src: "artistImages/whippedCream.png",
+        fill: "#ac9c2a"
     }
 ];
 
+shuffle(set);
   
 function getRandomObjectIndex(objects) {
 	return Math.floor(Math.random() * objects.length);
 }
 
 let randomSelectedIndex = getRandomObjectIndex(set);
+ console.log(randomSelectedIndex);
+let songs = [randomSelectedIndex.song1Streams, randomSelectedIndex.song2Streams, randomSelectedIndex.song3Streams, randomSelectedIndex.song4Streams];
+shuffle(songs);
+
 let currentIndex = randomSelectedIndex;
 const randomSelectedObject = set[randomSelectedIndex];
 customLogo(randomSelectedObject);
@@ -135,7 +168,7 @@ customLogo(randomSelectedObject);
 function customLogo(selectedObject) {
     console.log(selectedObject)
     const monthly = selectedObject.mL / 500000;
-    let songOneStreams = selectedObject.song1Streams;
+    let songOneStreams = songs[0];
     let songTwoStreams = selectedObject.song2Streams;
     let songThreeStreams = selectedObject.song3Streams;
     let songFourStreams = selectedObject.song4Streams;
@@ -195,16 +228,33 @@ function map(value, low1, high1, low2, high2) {
         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
     };
 
+    function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+      
+        // While there remain elements to shuffle.
+        while (currentIndex > 0) {
+      
+          // Pick a remaining element.
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+      
+        return array;
+      }
 
 
-// SPOTIFY API ATTEMPT  
-// const url = 'https://api.spotify.com/v1/tracks/4heve4ydl1u6V3AD4moZq9';
-// const options = {
-//     method: 'GET',
-//     headers: {
-//         'Authorization': 'Bearer 1POdFZRZbvb...qqillRxMr2z'
-//     }
-// };
+//     const url = 'https://spotify-scraper.p.rapidapi.com/v1/track/download?track=Lego%20House%20Ed%20Sheeran';
+//     const options = {
+//         method: 'GET',
+//         headers: {
+//             'X-RapidAPI-Key': '3a5bbb1dd7mshffb5b1fd5cb1d64p1a7b82jsn5c555b7faa62',
+//             'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com'
+//         }
+//     };
 
 // fetch(url, options)
 //     .then(function (response) {
