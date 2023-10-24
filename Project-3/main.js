@@ -10,14 +10,21 @@ const set =[
     {
         artistName: "LP Giobbi",
         mL: 3934806,
-        song1: "Antibodies - LP Giobbi Remix",
-        song1Streams: 26774794,
-        song2: "Forever And A Day",
-        song2Streams: 18661938,
-        song3: "All In A Dream",
-        song3Streams: 14584852,
-        song4: "Can't Let You Go",
-        song4Streams: 5387629,
+                songs: [
+            {
+                song: "Antibodies - LP Giobbi Remix",
+                streams: 26774794
+            }, {
+                song: "Forever And A Day",
+                streams: 18661938
+            }, {
+                song: "All In A Dream",
+                streams: 14584852
+            },{
+                song: "Can't Let You Go",
+                streams: 5387629
+            }
+        ],
         dateIssued: "August 2023",
         issueNo: 129,
         src: "artistImages/lPGiobbi.png",
@@ -26,14 +33,21 @@ const set =[
     {
         artistName: "Aluna",
         mL: 4229523,
-        song1: "Beggin'",
-        song1Streams: 30797317,
-        song2: "Forget About Me",
-        song2Streams: 30167368,
-        song3: "Body Pump - Lady Bee Remix",
-        song3Streams: 18736101,
-        song4: "More Baby",
-        song4Streams: 4232323,
+        songs: [
+            {
+                song: "Beggin'",
+                streams: 30797317
+            }, {
+                song: "Forget About Me",
+                streams: 30167368
+            }, {
+                song: "Body Pump - Lady Bee Remix",
+                streams: 18736101
+            },{
+                song: "More Baby",
+                streams: 4232323
+            }
+        ],
         dateIssued: "April 2022",
         issueNo: 113,
         src: "artistImages/aluna.png",
@@ -42,14 +56,21 @@ const set =[
     {
         artistName: "Zeds Dead",
         mL: 2360883,
-        song1: "Eyes On Fire - Zeds Dead Remix'",
-        song1Streams: 53597365,
-        song2: "Alive",
-        song2Streams: 30643625,
-        song3: "Gassed Up",
-        song3Streams: 15502516,
-        song4: "One Three Nine",
-        song4Streams: 8863126,
+        songs: [
+            {
+                song: "Eyes On Fire - Zeds Dead Remix",
+                streams: 53597365
+            }, {
+                song: "Alive",
+                streams: 30643625
+            }, {
+                song: "Gassed Up",
+                streams: 15502516
+            },{
+                song: "One Three Nine",
+                streams: 8863126
+            }
+        ],
         dateIssued: "July 2019",
         issueNo: 60,
         src: "artistImages/zedsDead.png",
@@ -58,14 +79,21 @@ const set =[
     {
         artistName: "Flume",
         mL: 10092810,
-        song1: "Never Be Like You (feat. Kai)",
-        song1Streams: 708659231,
-        song2: "You & Me - Flume Remix",
-        song2Streams: 591741788,
-        song3: "Say It (feat. Tove Lo)",
-        song3Streams: 376302619,
-        song4: "Drop The Game",
-        song4Streams: 289477592,
+        songs: [
+            {
+                song: "Never Be Like You (feat. Kai)",
+                streams: 708659231
+            }, {
+                song: "You & Me - Flume Remix",
+                streams: 591741788
+            }, {
+                song: "Say It (feat. Tove Lo)",
+                streams: 376302619
+            },{
+                song: "Drop The Game",
+                streams: 289477592
+            }
+        ],
         dateIssued: "May 2022",
         issueNo: 114,
         src: "artistImages/flume.png",
@@ -74,14 +102,21 @@ const set =[
     {
         artistName: "FISHER",
         mL: 10502570,
-        song1: "Losing It",
-        song1Streams: 478641567,
-        song2: "Stop It",
-        song2Streams: 144451558,
-        song3: "World, Hold On - FISHER Rework",
-        song3Streams: 137248923,
-        song4: "TAKE IT OFF",
-        song4Streams: 35300239,
+        songs: [
+            {
+                song: "Losing It",
+                streams: 478641567
+            }, {
+                song: "Stop It",
+                streams: 144451558
+            }, {
+                song: "World, Hold On - FISHER Rework",
+                streams: 137248923
+            },{
+                song: "TAKE IT OFF",
+                streams: 35300239
+            }
+        ],
         dateIssued: "March 2019",
         issueNo: 591,
         src: "artistImages/fisher.png",
@@ -90,33 +125,24 @@ const set =[
     {
         artistName: "SOPHIE",
         mL: 460734,
-        song1: "Immaterial",
-        song1Streams: 27001095,
-        song2: "Faceshopping",
-        song2Streams: 12499411,
-        song3: "Ponyboy",
-        song3Streams: 10658460,
-        song4: "Sweat - SOPHIE Remix",
-        song4Streams: 7167395,
+        songs: [
+            {
+                song: "Immaterial",
+                streams: 27001095
+            }, {
+                song: "Faceshopping",
+                streams: 12499411
+            }, {
+                song: "Ponyboy",
+                streams: 10658460
+            },{
+                song: "Sweat - SOPHIE Remix",
+                streams: 7167395
+            }
+        ],
         dateIssued: "July 2019",
         issueNo: 595,
         src: "artistImages/sophie.png",
-        fill: "#ac9c2a"
-    },
-    {
-        artistName: "WHIPPED CREAM",
-        mL: 878208,
-        song1: "Light of Mine",
-        song1Streams: 8751796,
-        song2: "Be Here (La La La)",
-        song2Streams: 5868807,
-        song3: "All Eyes On Me",
-        song3Streams: 4818570,
-        song4: "Rewind.. (But I Love You)",
-        song4Streams: 3554881,
-        dateIssued: "February 2023",
-        issueNo: 123,
-        src: "artistImages/whippedCream.png",
         fill: "#ac9c2a"
     },
     {
@@ -127,21 +153,16 @@ const set =[
                 song: "Light of Mine",
                 streams: 8751796
             }, {
-                song: "Light of Mine",
-                streams: 8751796
+                song: "Be Here (La La La)",
+                streams: 5868807
             }, {
-                song: "Light of Mine",
-                streams: 8751796
+                song: "All Eyes On Mee",
+                streams: 4818570
+            },{
+                song: "Rewind.. (But I Love You)",
+                streams: 3554881
             }
         ],
-        // song1: "Light of Mine",
-        // song1Streams: 8751796,
-        // song2: "Be Here (La La La)",
-        // song2Streams: 5868807,
-        // song3: "All Eyes On Me",
-        // song3Streams: 4818570,
-        // song4: "Rewind.. (But I Love You)",
-        // song4Streams: 3554881,
         dateIssued: "February 2023",
         issueNo: 123,
         src: "artistImages/whippedCream.png",
@@ -149,52 +170,47 @@ const set =[
     }
 ];
 
-shuffle(set);
-  
-function getRandomObjectIndex(objects) {
-	return Math.floor(Math.random() * objects.length);
-}
+// shuffle(set);
+console.log(set);
 
-let randomSelectedIndex = getRandomObjectIndex(set);
- console.log(randomSelectedIndex);
-let songs = [randomSelectedIndex.song1Streams, randomSelectedIndex.song2Streams, randomSelectedIndex.song3Streams, randomSelectedIndex.song4Streams];
+let selectedIndex = getIndex(set);
+ console.log(selectedIndex);
+ 
+// let tracks = [selectedIndex.songs[0].streams, selectedIndex.songs[1].streams, selectedIndex.songs[2].streams, selectedIndex.songs[3].streams];
+// shuffle(tracks);
+
+// let shuffledTracks = getIndex(tracks);
+// const randomSelectedTrack = tracks[selectedIndex];
+
+// let currentIndex = selectedIndex;
+const randomSelectedObject = randomFromArray(set);
+const songs = randomSelectedObject.songs;
+
 shuffle(songs);
 
-let currentIndex = randomSelectedIndex;
-const randomSelectedObject = set[randomSelectedIndex];
+const order = songs[0].streams;
+
+console.log(order);
+
 customLogo(randomSelectedObject);
     //console.log(selectedObject.artistName);
 
 function customLogo(selectedObject) {
     console.log(selectedObject)
     const monthly = selectedObject.mL / 500000;
-    let songOneStreams = songs[0];
-    let songTwoStreams = selectedObject.song2Streams;
-    let songThreeStreams = selectedObject.song3Streams;
-    let songFourStreams = selectedObject.song4Streams;
-    const totalStreams = songOneStreams + songTwoStreams + songThreeStreams + songFourStreams;
+    const totalStreams = selectedObject.songs[0].streams + selectedObject.songs[1].streams + selectedObject.songs[2].streams + selectedObject.songs[3].streams;
 
     console.log(totalStreams);
 
-    const songOneStreamsStyle = songOneStreams * 150 / totalStreams;
-    const songTwoStreamsStyle = songTwoStreams * 150 / totalStreams;
-    const songThreeStreamsStyle = songThreeStreams * 150 / totalStreams;
-    const songFourStreamsStyle = songFourStreams * 150 / totalStreams;
+    const songOneStreamsStyle = selectedObject.songs[0].streams * 150 / totalStreams;
+    const songTwoStreamsStyle = selectedObject.songs[1].streams * 150 / totalStreams;
+    const songThreeStreamsStyle = selectedObject.songs[2].streams * 150 / totalStreams;
+    const songFourStreamsStyle = selectedObject.songs[3].streams * 150 / totalStreams;
     const monthlyStyle = map(monthly, 0, 2000, 60, 100);
 
     console.log(songFourStreamsStyle);
     console.log(songOneStreamsStyle);
 
-    // const songOneStreamsStyle = map(songOneStreams, 0, 1000, 20, 200);
-    // const songTwoStreamsStyle = map(songTwoStreams, 0, 1000, 20, 200);
-    // const songThreeStreamsStyle = map(songThreeStreams, 0, 1000, 20, 200);
-    // const songFourStreamsStyle = map(songFourStreams, 0, 1000, 20, 200);
-    // const monthlyStyle = map(monthly, 0, 2000, 60, 160);
-
-    // ripple1.style.transform = `scaleX(${songOneStreamsStyle}%)`;
-    // ripple2.style.transform = `scaleX(${songTwoStreamsStyle}%)`;
-    // ripple3.style.transform = `scaleX(${songThreeStreamsStyle}%)`;
-    // ripple4.style.transform = `scaleX(${songFourStreamsStyle}%)`;
     ripple1.style.width = `${songOneStreamsStyle}%`;
     ripple2.style.width = `${songTwoStreamsStyle}%`;
     ripple3.style.width = `${songThreeStreamsStyle}%`;
@@ -228,7 +244,7 @@ function map(value, low1, high1, low2, high2) {
         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
     };
 
-    function shuffle(array) {
+function shuffle(array) {
         let currentIndex = array.length,  randomIndex;
       
         // While there remain elements to shuffle.
@@ -244,7 +260,16 @@ function map(value, low1, high1, low2, high2) {
         }
       
         return array;
-      }
+    }
+
+    function getIndex(object) {
+        return Math.floor(Math.random() * object.length);
+    }
+
+
+    function randomFromArray(arr){
+        return arr[Math.floor(Math.random()*arr.length)]
+    }
 
 
 //     const url = 'https://spotify-scraper.p.rapidapi.com/v1/track/download?track=Lego%20House%20Ed%20Sheeran';
