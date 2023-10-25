@@ -6,6 +6,7 @@ const disc = document.getElementById('disc');
 const container = document.getElementById('container')
 const info = document.getElementById('info');
 const right = document.getElementById('right');
+const ripple = document.getElementsByClassName('ripple');
 
 const set =[
     {
@@ -171,8 +172,7 @@ const set =[
     }
 ];
 
-// shuffle(set);
-console.log(set);
+shuffle(set);
 
 let selectedIndex = getIndex(set);
 
@@ -186,23 +186,16 @@ const order = songs[0].streams;
 console.log(order);
 
 customLogo(randomSelectedObject);
-    //console.log(selectedObject.artistName);
 
 function customLogo(selectedObject) {
-    console.log(selectedObject)
     const monthly = selectedObject.mL / 500000;
     const totalStreams = selectedObject.songs[0].streams + selectedObject.songs[1].streams + selectedObject.songs[2].streams + selectedObject.songs[3].streams;
-
-    console.log(totalStreams);
 
     const songOneStreamsStyle = selectedObject.songs[0].streams * 150 / totalStreams;
     const songTwoStreamsStyle = selectedObject.songs[1].streams * 150 / totalStreams;
     const songThreeStreamsStyle = selectedObject.songs[2].streams * 150 / totalStreams;
     const songFourStreamsStyle = selectedObject.songs[3].streams * 150 / totalStreams;
     const monthlyStyle = map(monthly, 0, 2000, 60, 100);
-
-    console.log(songFourStreamsStyle);
-    console.log(songOneStreamsStyle);
 
     ripple1.style.width = `${songOneStreamsStyle}%`;
     ripple2.style.width = `${songTwoStreamsStyle}%`;
@@ -211,13 +204,8 @@ function customLogo(selectedObject) {
     
     disc.style.transform = `scale(${monthlyStyle}%)`;
     container.style.transform = `scale(${monthlyStyle}% * 2)`;
-    right.style.backgroundColor = selectedObject.fill;
-
-    // ripple1.style.backgroundImage = `url('${selectedObject.src}')`;
-    // ripple2.style.backgroundImage = `url('${selectedObject.src}')`;
-    // ripple3.style.backgroundImage = `url('${selectedObject.src}')`;
-    // ripple4.style.backgroundImage = `url('${selectedObject.src}')`;
-    // disc.style.backgroundImage = `url('${selectedObject.src}')`;
+    right.style.backgroundColor = `${selectedObject.fill}`;
+    // right.style.backgroundImage = `url('${selectedObject.src}')`;
 
     const artistInfoSkeleton = `
     <p>Artist Name</p>
@@ -272,7 +260,14 @@ function shuffle(array) {
         return arr[Math.floor(Math.random()*arr.length)]
     }
 
+        // ripple1.style.backgroundImage = `url('${selectedObject.src}')`;
+    // ripple2.style.backgroundImage = `url('${selectedObject.src}')`;
+    // ripple3.style.backgroundImage = `url('${selectedObject.src}')`;
+    // ripple4.style.backgroundImage = `url('${selectedObject.src}')`;
+    // disc.style.backgroundImage = `url('${selectedObject.src}')`;
 
+
+//RAPID API METHOD
 //     const url = 'https://spotify-scraper.p.rapidapi.com/v1/track/download?track=Lego%20House%20Ed%20Sheeran';
 //     const options = {
 //         method: 'GET',
