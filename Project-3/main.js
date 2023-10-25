@@ -169,6 +169,121 @@ const set =[
         issueNo: 123,
         src: "artistImages/whippedCream.png",
         fill: "#57000B"
+    },
+    {
+        artistName: "Jayda G",
+        mL: 1436799,
+        songs: [
+            {
+                song: "Both Of Us - Edit",
+                streams: 46414753
+            }, {
+                song: "Mine O Mine",
+                streams: 10093828
+            }, {
+                song: "All I Need (DJ-Kicks) - Edit",
+                streams: 8898585
+            },{
+                song: "Anti-Hero - Jayda G Remix",
+                streams: 5500839
+            }
+        ],
+        dateIssued: "May 2023",
+        issueNo: 641,
+        src: "artistImages/jaydaG.png",
+        fill: "#171E2B"
+    },
+    {
+        artistName: "overmono",
+        mL: 915619,
+        songs: [
+            {
+                song: "Good Lies",
+                streams: 8533477
+            }, {
+                song: "So U Kno",
+                streams: 7804453
+            }, {
+                song: "Is U",
+                streams: 5367065
+            },{
+                song: "Freedom 2",
+                streams: 2430660
+            }
+        ],
+        dateIssued: "April 2022",
+        issueNo: 628,
+        src: "artistImages/overmono.png",
+        fill: "#E9E4F3"
+    },
+    {
+        artistName: "Dimitri Vegas & Like Mike",
+        mL: 9051650,
+        songs: [
+            {
+                song: "Instagram",
+                streams: 290208496
+            }, {
+                song: "Say My Name",
+                streams: 161179361
+            }, {
+                song: "Tremor - Sensation 2014 Anthem",
+                streams: 117429705
+            },{
+                song: "Mammoth",
+                streams: 75618246
+            }
+        ],
+        dateIssued: "November 2019",
+        issueNo: 599,
+        src: "artistImages/dVLM.png",
+        fill: "#7F9198"
+    },
+    {
+        artistName: "Martin Garrix",
+        mL: 23457965,
+        songs: [
+            {
+                song: "In the Name of Love",
+                streams: 1342840133
+            }, {
+                song: "Scared to Be Lonely",
+                streams: 1174665086
+            }, {
+                song: "There for You",
+                streams: 591531920
+            },{
+                song: "Ocean (feat. Khalid)",
+                streams: 510971336
+            }
+        ],
+        dateIssued: "November 2022",
+        issueNo: 120,
+        src: "artistImages/mG.png",
+        fill: "#795C51"
+    },
+    {
+        artistName: "TOKiMONSTA",
+        mL: 1068475,
+        songs: [
+            {
+                song: "Realla",
+                streams: 42106748
+            }, {
+                song: "Smoke & Mirrors",
+                streams: 21814327
+            }, {
+                song: "Rose's Thorn",
+                streams: 21320322
+            },{
+                song: "Darkest (Dim)",
+                streams: 14244990
+            }
+        ],
+        dateIssued: "September 2019",
+        issueNo: 62,
+        src: "artistImages/tokimonsta.png",
+        fill: "#EED100"
     }
 ];
 
