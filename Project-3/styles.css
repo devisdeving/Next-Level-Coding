@@ -105,6 +105,28 @@ p {
     padding: 0.25em;
 }
 
+#hover {
+    background-color: rgb(0, 0, 0);
+    padding: 0.8em;
+    border-radius: 0.5em;
+    position: absolute;
+    display: none;
+    transform: translate(10%, 25%);
+    display: none;
+}
+
+.ripple:hover {
+    display: block;
+}
+
+#hover p {
+    margin: 0em;
+}
+
+#hover p:first-child {
+    color: white;
+}
+
 #button {
     font-family: var(--caption-font);
     cursor: pointer;
@@ -116,7 +138,7 @@ p {
     border-radius: 10em;
 }
 
-@keyframes floating {
+@keyframes floatinga {
     0% {
         transform: translateY(0%);
     }
