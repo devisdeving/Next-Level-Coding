@@ -33,259 +33,259 @@ const set =[
         src: "artistImages/lPGiobbi.png",
         fill: "#603F15"
     },
-    // {
-    //     artistName: "Aluna",
-    //     mL: 4229523,
-    //     songs: [
-    //         {
-    //             song: "Beggin'",
-    //             streams: 30797317
-    //         }, {
-    //             song: "Forget About Me",
-    //             streams: 30167368
-    //         }, {
-    //             song: "Body Pump - Lady Bee Remix",
-    //             streams: 18736101
-    //         },{
-    //             song: "More Baby",
-    //             streams: 4232323
-    //         }
-    //     ],
-    //     dateIssued: "April 2022",
-    //     issueNo: 113,
-    //     src: "artistImages/aluna.png",
-    //     fill: "#48B2FF"
-    // },
-    // {
-    //     artistName: "Zeds Dead",
-    //     mL: 2360883,
-    //     songs: [
-    //         {
-    //             song: "Eyes On Fire - Zeds Dead Remix",
-    //             streams: 53597365
-    //         }, {
-    //             song: "Alive",
-    //             streams: 30643625
-    //         }, {
-    //             song: "Gassed Up",
-    //             streams: 15502516
-    //         },{
-    //             song: "One Three Nine",
-    //             streams: 8863126
-    //         }
-    //     ],
-    //     dateIssued: "July 2019",
-    //     issueNo: 60,
-    //     src: "artistImages/zedsDead.png",
-    //     fill: "#4EB8C9"
-    // },    
-    // {
-    //     artistName: "Flume",
-    //     mL: 10092810,
-    //     songs: [
-    //         {
-    //             song: "Drop The Game",
-    //             streams: 289477592
-    //         },{
-    //             song: "Say It (feat. Tove Lo)",
-    //             streams: 376302619
-    //         },{
-    //             song: "Never Be Like You (feat. Kai)",
-    //             streams: 708659231
-    //         },{
-    //             song: "You & Me - Flume Remix",
-    //             streams: 591741788
-    //         }
-    //     ],
-    //     dateIssued: "May 2022",
-    //     issueNo: 114,
-    //     src: "artistImages/flume.png",
-    //     fill: "#F27B38"
-    // },
-    // {
-    //     artistName: "FISHER",
-    //     mL: 10502570,
-    //     songs: [
-    //         {
-    //             song: "Losing It",
-    //             streams: 478641567
-    //         },{
-    //             song: "TAKE IT OFF",
-    //             streams: 35300239
-    //         },{
-    //             song: "Stop It",
-    //             streams: 144451558
-    //         },{
-    //             song: "World, Hold On - FISHER Rework",
-    //             streams: 137248923
-    //         }
-    //     ],
-    //     dateIssued: "March 2019",
-    //     issueNo: 591,
-    //     src: "artistImages/fisher.png",
-    //     fill: "#013C66"
-    // },    
-    // {
-    //     artistName: "SOPHIE",
-    //     mL: 460734,
-    //     songs: [
-    //         {
-    //             song: "Immaterial",
-    //             streams: 27001095
-    //         }, {
-    //             song: "Faceshopping",
-    //             streams: 12499411
-    //         }, {
-    //             song: "Ponyboy",
-    //             streams: 10658460
-    //         },{
-    //             song: "Sweat - SOPHIE Remix",
-    //             streams: 7167395
-    //         }
-    //     ],
-    //     dateIssued: "July 2019",
-    //     issueNo: 595,
-    //     src: "artistImages/sophie.png",
-    //     fill: "#51095C"
-    // },
-    // {
-    //     artistName: "WHIPPED CREAM",
-    //     mL: 878208,
-    //     songs: [
-    //         {
-    //             song: "Light of Mine",
-    //             streams: 8751796
-    //         }, {
-    //             song: "Be Here (La La La)",
-    //             streams: 5868807
-    //         }, {
-    //             song: "All Eyes On Mee",
-    //             streams: 4818570
-    //         },{
-    //             song: "Rewind.. (But I Love You)",
-    //             streams: 3554881
-    //         }
-    //     ],
-    //     dateIssued: "February 2023",
-    //     issueNo: 123,
-    //     src: "artistImages/whippedCream.png",
-    //     fill: "#57000B"
-    // },
-    // {
-    //     artistName: "Jayda G",
-    //     mL: 1436799,
-    //     songs: [
-    //         {
-    //             song: "Both Of Us - Edit",
-    //             streams: 46414753
-    //         }, {
-    //             song: "Mine O Mine",
-    //             streams: 10093828
-    //         }, {
-    //             song: "All I Need (DJ-Kicks) - Edit",
-    //             streams: 8898585
-    //         },{
-    //             song: "Anti-Hero - Jayda G Remix",
-    //             streams: 5500839
-    //         }
-    //     ],
-    //     dateIssued: "May 2023",
-    //     issueNo: 641,
-    //     src: "artistImages/jaydaG.png",
-    //     fill: "#171E2B"
-    // },
-    // {
-    //     artistName: "overmono",
-    //     mL: 915619,
-    //     songs: [
-    //         {
-    //             song: "Good Lies",
-    //             streams: 8533477
-    //         }, {
-    //             song: "So U Kno",
-    //             streams: 7804453
-    //         }, {
-    //             song: "Is U",
-    //             streams: 5367065
-    //         },{
-    //             song: "Freedom 2",
-    //             streams: 2430660
-    //         }
-    //     ],
-    //     dateIssued: "April 2022",
-    //     issueNo: 628,
-    //     src: "artistImages/overmono.png",
-    //     fill: "#E9E4F3"
-    // },
-    // {
-    //     artistName: "Dimitri Vegas & Like Mike",
-    //     mL: 9051650,
-    //     songs: [
-    //         {
-    //             song: "Instagram",
-    //             streams: 290208496
-    //         }, {
-    //             song: "Say My Name",
-    //             streams: 161179361
-    //         }, {
-    //             song: "Tremor - Sensation 2014 Anthem",
-    //             streams: 117429705
-    //         },{
-    //             song: "Mammoth",
-    //             streams: 75618246
-    //         }
-    //     ],
-    //     dateIssued: "November 2019",
-    //     issueNo: 599,
-    //     src: "artistImages/dVLM.png",
-    //     fill: "#7F9198"
-    // },
-    // {
-    //     artistName: "Martin Garrix",
-    //     mL: 23457965,
-    //     songs: [
-    //         {
-    //             song: "In the Name of Love",
-    //             streams: 1342840133
-    //         }, {
-    //             song: "Scared to Be Lonely",
-    //             streams: 1174665086
-    //         }, {
-    //             song: "There for You",
-    //             streams: 591531920
-    //         },{
-    //             song: "Ocean (feat. Khalid)",
-    //             streams: 510971336
-    //         }
-    //     ],
-    //     dateIssued: "November 2022",
-    //     issueNo: 120,
-    //     src: "artistImages/mG.png",
-    //     fill: "#795C51"
-    // },
-    // {
-    //     artistName: "TOKiMONSTA",
-    //     mL: 1068475,
-    //     songs: [
-    //         {
-    //             song: "Realla",
-    //             streams: 42106748
-    //         }, {
-    //             song: "Smoke & Mirrors",
-    //             streams: 21814327
-    //         }, {
-    //             song: "Rose's Thorn",
-    //             streams: 21320322
-    //         },{
-    //             song: "Darkest (Dim)",
-    //             streams: 14244990
-    //         }
-    //     ],
-    //     dateIssued: "September 2019",
-    //     issueNo: 62,
-    //     src: "artistImages/tokimonsta.png",
-    //     fill: "#EED100"
-    // }
+    {
+        artistName: "Aluna",
+        mL: 4229523,
+        songs: [
+            {
+                song: "Beggin'",
+                streams: 30797317
+            }, {
+                song: "Forget About Me",
+                streams: 30167368
+            }, {
+                song: "Body Pump - Lady Bee Remix",
+                streams: 18736101
+            },{
+                song: "More Baby",
+                streams: 4232323
+            }
+        ],
+        dateIssued: "April 2022",
+        issueNo: 113,
+        src: "artistImages/aluna.png",
+        fill: "#48B2FF"
+    },
+    {
+        artistName: "Zeds Dead",
+        mL: 2360883,
+        songs: [
+            {
+                song: "Eyes On Fire - Zeds Dead Remix",
+                streams: 53597365
+            }, {
+                song: "Alive",
+                streams: 30643625
+            }, {
+                song: "Gassed Up",
+                streams: 15502516
+            },{
+                song: "One Three Nine",
+                streams: 8863126
+            }
+        ],
+        dateIssued: "July 2019",
+        issueNo: 60,
+        src: "artistImages/zedsDead.png",
+        fill: "#4EB8C9"
+    },    
+    {
+        artistName: "Flume",
+        mL: 10092810,
+        songs: [
+            {
+                song: "Drop The Game",
+                streams: 289477592
+            },{
+                song: "Say It (feat. Tove Lo)",
+                streams: 376302619
+            },{
+                song: "Never Be Like You (feat. Kai)",
+                streams: 708659231
+            },{
+                song: "You & Me - Flume Remix",
+                streams: 591741788
+            }
+        ],
+        dateIssued: "May 2022",
+        issueNo: 114,
+        src: "artistImages/flume.png",
+        fill: "#F27B38"
+    },
+    {
+        artistName: "FISHER",
+        mL: 10502570,
+        songs: [
+            {
+                song: "Losing It",
+                streams: 478641567
+            },{
+                song: "TAKE IT OFF",
+                streams: 35300239
+            },{
+                song: "Stop It",
+                streams: 144451558
+            },{
+                song: "World, Hold On - FISHER Rework",
+                streams: 137248923
+            }
+        ],
+        dateIssued: "March 2019",
+        issueNo: 591,
+        src: "artistImages/fisher.png",
+        fill: "#013C66"
+    },    
+    {
+        artistName: "SOPHIE",
+        mL: 460734,
+        songs: [
+            {
+                song: "Immaterial",
+                streams: 27001095
+            }, {
+                song: "Faceshopping",
+                streams: 12499411
+            }, {
+                song: "Ponyboy",
+                streams: 10658460
+            },{
+                song: "Sweat - SOPHIE Remix",
+                streams: 7167395
+            }
+        ],
+        dateIssued: "July 2019",
+        issueNo: 595,
+        src: "artistImages/sophie.png",
+        fill: "#51095C"
+    },
+    {
+        artistName: "WHIPPED CREAM",
+        mL: 878208,
+        songs: [
+            {
+                song: "Light of Mine",
+                streams: 8751796
+            }, {
+                song: "Be Here (La La La)",
+                streams: 5868807
+            }, {
+                song: "All Eyes On Mee",
+                streams: 4818570
+            },{
+                song: "Rewind.. (But I Love You)",
+                streams: 3554881
+            }
+        ],
+        dateIssued: "February 2023",
+        issueNo: 123,
+        src: "artistImages/whippedCream.png",
+        fill: "#57000B"
+    },
+    {
+        artistName: "Jayda G",
+        mL: 1436799,
+        songs: [
+            {
+                song: "Both Of Us - Edit",
+                streams: 46414753
+            }, {
+                song: "Mine O Mine",
+                streams: 10093828
+            }, {
+                song: "All I Need (DJ-Kicks) - Edit",
+                streams: 8898585
+            },{
+                song: "Anti-Hero - Jayda G Remix",
+                streams: 5500839
+            }
+        ],
+        dateIssued: "May 2023",
+        issueNo: 641,
+        src: "artistImages/jaydaG.png",
+        fill: "#171E2B"
+    },
+    {
+        artistName: "overmono",
+        mL: 915619,
+        songs: [
+            {
+                song: "Good Lies",
+                streams: 8533477
+            }, {
+                song: "So U Kno",
+                streams: 7804453
+            }, {
+                song: "Is U",
+                streams: 5367065
+            },{
+                song: "Freedom 2",
+                streams: 2430660
+            }
+        ],
+        dateIssued: "April 2022",
+        issueNo: 628,
+        src: "artistImages/overmono.png",
+        fill: "#E9E4F3"
+    },
+    {
+        artistName: "Dimitri Vegas & Like Mike",
+        mL: 9051650,
+        songs: [
+            {
+                song: "Instagram",
+                streams: 290208496
+            }, {
+                song: "Say My Name",
+                streams: 161179361
+            }, {
+                song: "Tremor - Sensation 2014 Anthem",
+                streams: 117429705
+            },{
+                song: "Mammoth",
+                streams: 75618246
+            }
+        ],
+        dateIssued: "November 2019",
+        issueNo: 599,
+        src: "artistImages/dVLM.png",
+        fill: "#7F9198"
+    },
+    {
+        artistName: "Martin Garrix",
+        mL: 23457965,
+        songs: [
+            {
+                song: "In the Name of Love",
+                streams: 1342840133
+            }, {
+                song: "Scared to Be Lonely",
+                streams: 1174665086
+            }, {
+                song: "There for You",
+                streams: 591531920
+            },{
+                song: "Ocean (feat. Khalid)",
+                streams: 510971336
+            }
+        ],
+        dateIssued: "November 2022",
+        issueNo: 120,
+        src: "artistImages/mG.png",
+        fill: "#795C51"
+    },
+    {
+        artistName: "TOKiMONSTA",
+        mL: 1068475,
+        songs: [
+            {
+                song: "Realla",
+                streams: 42106748
+            }, {
+                song: "Smoke & Mirrors",
+                streams: 21814327
+            }, {
+                song: "Rose's Thorn",
+                streams: 21320322
+            },{
+                song: "Darkest (Dim)",
+                streams: 14244990
+            }
+        ],
+        dateIssued: "September 2019",
+        issueNo: 62,
+        src: "artistImages/tokimonsta.png",
+        fill: "#EED100"
+    }
 ];
 
 shuffle(set);
