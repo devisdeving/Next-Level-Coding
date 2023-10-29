@@ -301,8 +301,6 @@ const randomSelectedObject = randomFromArray(set);
 
 // const streams = shuffledSongs[0].streams;
 
-customLogo(randomSelectedObject);
-
 function customLogo(selectedObject) {
     const monthly = selectedObject.mL / 500000;
     const totalStreams = selectedObject.songs[0].streams + selectedObject.songs[1].streams + selectedObject.songs[2].streams + selectedObject.songs[3].streams;
@@ -344,6 +342,8 @@ function customLogo(selectedObject) {
 
     hover.innerHTML = hoverInfo;
 };
+
+customLogo(randomSelectedObject);
 
 ripple1.addEventListener('mouseover', function() {
     hover.style.display = 'block';
