@@ -99,7 +99,7 @@ const set =[
         ],
         dateIssued: "May 2022",
         issueNo: 114,
-        src: "artistImages/flume.png",
+        src: "artistImages/flume.jpeg",
         fill: "#F27B38"
     },
     {
