@@ -15,17 +15,17 @@ const set =[
         mL: 3934806,
             songs: [
             {
-                song: "Can't Let You Go",
-                streams: 5387629
-            }, {
-                song: "All In A Dream",
-                streams: 14584852
+                song: "Antibodies - LP Giobbi Remix",
+                streams: 26774794
             },{
                 song: "Forever And A Day",
                 streams: 18661938
             },{
-                song: "Antibodies - LP Giobbi Remix",
-                streams: 26774794
+                song: "All In A Dream",
+                streams: 14584852
+            },{
+                song: "Can't Let You Go",
+                streams: 5387629
             }
         ],
         dateIssued: "August 2023",
@@ -38,17 +38,17 @@ const set =[
         mL: 4229523,
         songs: [
             {
-                song: "Beggin'",
-                streams: 30797317
-            }, {
-                song: "Forget About Me",
-                streams: 30167368
-            }, {
                 song: "Body Pump - Lady Bee Remix",
                 streams: 18736101
             },{
                 song: "More Baby",
                 streams: 4232323
+            },{
+                song: "Forget About Me",
+                streams: 30167368
+            },{
+                song: "Beggin'",
+                streams: 30797317
             }
         ],
         dateIssued: "April 2022",
@@ -61,17 +61,17 @@ const set =[
         mL: 2360883,
         songs: [
             {
+                song: "One Three Nine",
+                streams: 8863126
+            },{
                 song: "Eyes On Fire - Zeds Dead Remix",
                 streams: 53597365
-            }, {
-                song: "Alive",
-                streams: 30643625
-            }, {
+            },{
                 song: "Gassed Up",
                 streams: 15502516
             },{
-                song: "One Three Nine",
-                streams: 8863126
+                song: "Alive",
+                streams: 30643625
             }
         ],
         dateIssued: "July 2019",
@@ -107,8 +107,8 @@ const set =[
         mL: 10502570,
         songs: [
             {
-                song: "Losing It",
-                streams: 478641567
+                song: "World, Hold On - FISHER Rework",
+                streams: 137248923
             },{
                 song: "TAKE IT OFF",
                 streams: 35300239
@@ -116,8 +116,8 @@ const set =[
                 song: "Stop It",
                 streams: 144451558
             },{
-                song: "World, Hold On - FISHER Rework",
-                streams: 137248923
+                song: "Losing It",
+                streams: 478641567
             }
         ],
         dateIssued: "March 2019",
@@ -130,17 +130,17 @@ const set =[
         mL: 460734,
         songs: [
             {
-                song: "Immaterial",
-                streams: 27001095
-            }, {
-                song: "Faceshopping",
-                streams: 12499411
-            }, {
+                song: "Sweat - SOPHIE Remix",
+                streams: 7167395
+            },{
                 song: "Ponyboy",
                 streams: 10658460
             },{
-                song: "Sweat - SOPHIE Remix",
-                streams: 7167395
+                song: "Immaterial",
+                streams: 27001095
+            },{
+                song: "Faceshopping",
+                streams: 12499411
             }
         ],
         dateIssued: "July 2019",
@@ -153,9 +153,6 @@ const set =[
         mL: 878208,
         songs: [
             {
-                song: "Light of Mine",
-                streams: 8751796
-            }, {
                 song: "Be Here (La La La)",
                 streams: 5868807
             }, {
@@ -164,6 +161,9 @@ const set =[
             },{
                 song: "Rewind.. (But I Love You)",
                 streams: 3554881
+            },{
+                song: "Light of Mine",
+                streams: 8751796
             }
         ],
         dateIssued: "February 2023",
@@ -176,9 +176,6 @@ const set =[
         mL: 1436799,
         songs: [
             {
-                song: "Both Of Us - Edit",
-                streams: 46414753
-            }, {
                 song: "Mine O Mine",
                 streams: 10093828
             }, {
@@ -187,6 +184,9 @@ const set =[
             },{
                 song: "Anti-Hero - Jayda G Remix",
                 streams: 5500839
+            },{
+                song: "Both Of Us - Edit",
+                streams: 46414753
             }
         ],
         dateIssued: "May 2023",
@@ -199,14 +199,14 @@ const set =[
         mL: 915619,
         songs: [
             {
-                song: "Good Lies",
-                streams: 8533477
-            }, {
-                song: "So U Kno",
-                streams: 7804453
-            }, {
                 song: "Is U",
                 streams: 5367065
+            },{
+                song: "So U Kno",
+                streams: 7804453
+            },{
+                song: "Good Lies",
+                streams: 8533477
             },{
                 song: "Freedom 2",
                 streams: 2430660
@@ -222,17 +222,17 @@ const set =[
         mL: 9051650,
         songs: [
             {
-                song: "Instagram",
-                streams: 290208496
-            }, {
-                song: "Say My Name",
-                streams: 161179361
-            }, {
-                song: "Tremor - Sensation 2014 Anthem",
-                streams: 117429705
-            },{
                 song: "Mammoth",
                 streams: 75618246
+            },{
+                song: "Instagram",
+                streams: 290208496
+            },{
+                song: "Say My Name",
+                streams: 161179361
+            },{
+                song: "Tremor - Sensation 2014 Anthem",
+                streams: 117429705
             }
         ],
         dateIssued: "November 2019",
@@ -245,17 +245,17 @@ const set =[
         mL: 23457965,
         songs: [
             {
-                song: "In the Name of Love",
-                streams: 1342840133
-            }, {
+                song: "Ocean (feat. Khalid)",
+                streams: 510971336
+            },{
                 song: "Scared to Be Lonely",
                 streams: 1174665086
-            }, {
+            },{
                 song: "There for You",
                 streams: 591531920
             },{
-                song: "Ocean (feat. Khalid)",
-                streams: 510971336
+                song: "In the Name of Love",
+                streams: 1342840133
             }
         ],
         dateIssued: "November 2022",
@@ -268,17 +268,17 @@ const set =[
         mL: 1068475,
         songs: [
             {
-                song: "Realla",
-                streams: 42106748
-            }, {
                 song: "Smoke & Mirrors",
                 streams: 21814327
-            }, {
+            },{
                 song: "Rose's Thorn",
                 streams: 21320322
             },{
                 song: "Darkest (Dim)",
                 streams: 14244990
+            },{
+                song: "Realla",
+                streams: 42106748
             }
         ],
         dateIssued: "September 2019",
@@ -293,13 +293,13 @@ shuffle(set);
 let selectedIndex = getIndex(set);
 
 const randomSelectedObject = randomFromArray(set);
-const songs = randomSelectedObject.songs;
+// const songs = randomSelectedObject.songs;
 
-shuffle(songs);
+// shuffle(songs);
 
-const shuffledSongs = [...songs];
+// const shuffledSongs = [...songs];
 
-const streams = shuffledSongs[0].streams;
+// const streams = shuffledSongs[0].streams;
 
 customLogo(randomSelectedObject);
 
