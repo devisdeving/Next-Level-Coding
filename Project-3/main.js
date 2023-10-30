@@ -99,7 +99,7 @@ const set =[
         ],
         dateIssued: "May 2022",
         issueNo: 114,
-        src: "artistImages/flume.jpeg",
+        src: "artistImages/flume.png",
         fill: "#F27B38"
     },
     {
@@ -319,7 +319,7 @@ function customLogo(selectedObject) {
     disc.style.transform = `scale(${monthlyStyle}%)`;
     container.style.transform = `scale(${monthlyStyle}% * 2)`;
     right.style.backgroundColor = `${selectedObject.fill}`;
-    // right.style.backgroundImage = `url('${selectedObject.src}')`;
+    right.style.backgroundImage = `url('${selectedObject.src}')`;
 
     const artistInfoSkeleton = `
     <p>Artist Name</p>
@@ -330,7 +330,6 @@ function customLogo(selectedObject) {
         <h2>${selectedObject.issueNo}</h2>
         <p>Date Issued</p>
         <h2>${selectedObject.dateIssued}</h2>
-        <img id="artistImage" src="${selectedObject.src}" alt="Artist Image">
     `;
 
     info.innerHTML = artistInfoSkeleton;
@@ -392,14 +391,7 @@ document.addEventListener('mousemove', (e) => {
   // Hide the div when the mouse leaves the window
   document.addEventListener('mouseleave', () => {
     hover.style.display = 'none';
-  });
-
-const button = document.getElementById('button');
-
-button.addEventListener('click', function () {
-    location.reload(); // Reloads the page
-  });
-  
+  }); 
 
 function map(value, low1, high1, low2, high2) {
         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
