@@ -8,6 +8,7 @@ const info = document.getElementById('info');
 const right = document.getElementById('right');
 const ripple = document.querySelectorAll('ripple');
 const hover = document.getElementById('hover');
+const imgCont = document.getElementById('imgContainer');
 
 const set =[
     {
@@ -320,6 +321,10 @@ function customLogo(selectedObject) {
     container.style.transform = `scale(${monthlyStyle}% * 2)`;
     right.style.backgroundColor = `${selectedObject.fill}`;
     right.style.backgroundImage = `url('${selectedObject.src}')`;
+    right.style.backgroundPosition = `center center`;
+    right.style.backgroundRepeat = `no-repeat`;
+    right.style.backgroundSize = `cover`;
+
 
     const artistInfoSkeleton = `
     <p>Artist Name</p>

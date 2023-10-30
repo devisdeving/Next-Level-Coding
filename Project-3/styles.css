@@ -19,7 +19,8 @@
 :root {
     --font: 'ABCMaxiRoundVariable-Trial', sans-serif;
     --caption-font: 'ABCFavoritEdu-Regular', sans-serif;
-    --bg-color: rgba(255, 255, 255, .8);
+    --bg-color: #FB0207;
+    /* --bg-color: rgba(255, 255, 255, .8); */
     --border-radius: 0.5em;
 
 }
@@ -27,8 +28,8 @@
 body {
     display: flex;
     margin: 1em;
-    background-color: rgb(240, 240, 240);
-    color: rgb(0, 0, 0);
+    background-color: #400000;
+    color: white;
     font-family: var(--font);
     justify-content: space-between;
 }
@@ -41,16 +42,21 @@ body {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: lighter;
 }
 
 p {
-    color: rgb(120, 119, 119);
+    color: #400000;
     font-family: var(--caption-font);
     margin-bottom: -5px;
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 24px;
+}
+
+#hover p {
+    color: #c1c1c1;
+    font-size: 18px;
 }
 
 #artistImage {
@@ -74,15 +80,16 @@ p {
     overflow: hidden;
 }
 
-#rigth img {
-    left: 50%;
+/* #rigth img {
+    position: absolute;
     transform: translateX(-50%) translateY(-50%);
     aspect-ratio: 1;
-    width: 100%;
+    width: auto;
+    height: 100vh;
     background-position: center;
     background-size: cover;
     object-fit: cover;
-}
+} */
 
 #container {
     width: 70rem;
@@ -126,7 +133,7 @@ p {
     border-radius: 0.5em;
     position: absolute;
     display: none;
-    transform: translate(10%, 25%);
+    transform: translate(-250%, -60%);
     display: none;
 }
 
