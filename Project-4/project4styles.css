@@ -1,16 +1,25 @@
 .week {
-    height: 100px;
-    width: 100px;
-    background-color: rgb(215, 215, 215);
+    height: 108px;
+    width: 192px;
+    background-color: rgb(255, 255, 255);
     position: relative;
+    background-image: url('productMask.png');
+    z-index: 3;
 }
 
-.confetti {
-    width: 5px;
-  height: 10px;
+.dots {
+  width: auto;
   background: black;
+  mask-image: url('https://www.datocms-assets.com/99382/1699899730-mgdot.svg');
+  mix-blend-mode:multiply;
   position:absolute;
   transform: rotate(20deg);
-  background: hsl(126, 25%, 76%);
   transition: 200ms;
+  /* background-image: url('mGDotMask.png'); */
+  z-index: 0;
+}
+
+img {
+  aspect-ratio: 1.64;
+  width: 40px;
 }

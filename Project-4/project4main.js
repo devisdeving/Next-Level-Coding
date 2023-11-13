@@ -23,21 +23,26 @@ fetch(opensheet_uri)
           const timeMapped = datapoint.time * 10;
           console.log(timeMapped);
           
-          // make confetti
+          // make dots
           for (let i=0;i<timeMapped;i++) {
-            //do whatever you want 1000 times here
-            let confettiElem = document.createElement("DIV");
-            confettiElem.classList.add("confetti");
-            confettiElem.style.left = Math.random() * 100 + "%";
-            confettiElem.style.top = Math.random() * 100 + "%";
-            confettiElem.style.transform = `rotate(${Math.random() * 360}deg)`;
-            confettiElem.style.background = `hsl(${Math.random()*360}, 60%, 60%)`;
-            confettiElem.addEventListener("mouseover", function(){
-              confettiElem.style.left = Math.random() * 100 + "%";
-              confettiElem.style.top = Math.random() * 100 + "%";
-            })
-            dataElem.appendChild(confettiElem);
+
+            const dotsElem = document.createElement("DIV");
+            const dotsSVG = document.createElement("IMG");
+
+            dotsSVG.id = "dotsSVG"
+            dotsSVG.src = "https://www.datocms-assets.com/99382/1699899730-mgdot.svg";
             
+            dotsElem.classList.add("dots");
+            dotsElem.style.left = Math.random() * 100 + "%";
+            dotsElem.style.top = Math.random() * 100 + "%";
+            dotsElem.style.transform = `rotate(${Math.random() * 360}deg)`;
+            dotsElem.style.background = `hsl(${Math.random()*360}, 60%, 60%)`;
+            dotsElem.addEventListener("mouseover", function(){
+            dotsElem.style.left = Math.random() * 100 + "%";
+            dotsElem.style.top = Math.random() * 100 + "%";})
+
+            dataElem.appendChild(dotsElem);
+            dotsElem.appendChild(dotsSVG);
           }
           
           if (datapoint.crit){
