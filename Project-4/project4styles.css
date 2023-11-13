@@ -1,0 +1,16 @@
+.week {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(215, 215, 215);
+    position: relative;
+}
+
+.confetti {
+    width: 5px;
+  height: 10px;
+  background: black;
+  position:absolute;
+  transform: rotate(20deg);
+  background: hsl(126, 25%, 76%);
+  transition: 200ms;
+}
