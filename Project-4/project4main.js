@@ -1,10 +1,9 @@
 
 const dataParent = document.getElementById("dataGoesHere");
-// save your sheet ID and name of the tab as variables for use
+
 let sheetID = "1ldVnyJrQqH5YEfouNe9L6qGe8bMWsgLeCB7HdNnfcZI";
 let tabName = 'sheet1'
 
-// format them into Ben's uri
 let opensheet_uri = `https://opensheet.elk.sh/${sheetID}/${tabName}`
 
 fetch(opensheet_uri)
@@ -17,10 +16,10 @@ fetch(opensheet_uri)
         for (let datapoint of data) {
           
           let dataElem = document.createElement("DIV");
-          dataElem.classList.add("week");
+          dataElem.classList.add("scent");
           dataElem.innerHTML = datapoint.time;
           
-          const timeMapped = datapoint.time * 10;
+          const timeMapped = datapoint.time * 5;
           console.log(timeMapped);
           
           // make dots
@@ -30,13 +29,15 @@ fetch(opensheet_uri)
             const dotsSVG = document.createElement("IMG");
 
             dotsSVG.id = "dotsSVG"
-            dotsSVG.src = "https://www.datocms-assets.com/99382/1699899730-mgdot.svg";
+            dotsSVG.src = "mGDot.svg";
+            dotsSVG.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
             
             dotsElem.classList.add("dots");
             dotsElem.style.left = Math.random() * 100 + "%";
             dotsElem.style.top = Math.random() * 100 + "%";
             dotsElem.style.transform = `rotate(${Math.random() * 360}deg)`;
-            dotsElem.style.background = `hsl(${Math.random()*360}, 60%, 60%)`;
+            dotsElem.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+
             dotsElem.addEventListener("mouseover", function(){
             dotsElem.style.left = Math.random() * 100 + "%";
             dotsElem.style.top = Math.random() * 100 + "%";})
@@ -46,7 +47,7 @@ fetch(opensheet_uri)
           }
           
           if (datapoint.crit){
-            console.log("there is a crit this week");
+            console.log("there is a crit this scent");
             dataElem.style.background = "#efefef";
           }
           
