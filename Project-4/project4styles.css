@@ -1,4 +1,60 @@
-.scent {
+#dataGoesHere {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#inputTab {
+  position: relative;
+  z-index: 11;
+}
+
+#mask {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.part {
+  height: 33vh;
+  position: relative;
+  z-index: 0;
+}
+
+/* #topPart {
+  background-color: #ff1d1d;
+}
+
+#midPart {
+  background-color: #1d61ff;
+}
+
+#botPart {
+  background-color: #ffdd1d;
+} */
+
+.confetti{
+  width: 124px;
+  height: 75px;
+  background: black;
+  position:absolute;
+  transform: rotate(20deg);
+  transition: 200ms;
+  mix-blend-mode:multiply;
+  opacity: 60%;
+  z-index: 0;
+}
+
+body {
+  background-image: url('perfumeMask.png');
+  position: relative;
+  z-index: 100;
+  width: 100vw;
+}
+
+/* .scent {
     height: 108px;
     width: 192px;
     background-color: rgb(255, 255, 255);
@@ -11,7 +67,7 @@
   width: auto;
   background: black;
   mask-image: url('mGDot.svg');
-  /* -webkit-mask-image: url('mGDot.svg'); */
+  -webkit-mask-image: url('mGDot.svg');
   mix-blend-mode:multiply;
   position:absolute;
   transform: rotate(20deg);
@@ -22,4 +78,4 @@
 img {
   aspect-ratio: 1.64;
   width: 40px;
-}
+} */
