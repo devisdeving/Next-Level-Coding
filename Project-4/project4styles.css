@@ -1,12 +1,55 @@
+@font-face {
+  font-family: 'BeausiteClassicWebTrial-Bold';
+  src: url('BeausiteClassicWebTrial-Bold.woff2') format('woff2'),
+      url('BeausiteClassicWebTrial-Bold.woff') format('woff');
+      font-style: normal;
+      font-weight: normal;
+      font-display: swap;
+}
+
+@font-face {
+  font-family: 'BeausiteClassicWebTrial-Medium';
+  src: url('BeausiteClassicWebTrial-Medium.woff2') format('woff2'),
+      url('BeausiteClassicWebTrial-Medium.woff') format('woff');
+      font-style: normal;
+      font-weight: normal;
+      font-display: swap;
+}
+
+:root {
+  --font: 'BeausiteClassicWebTrial-Medium';
+  --font-bold: 'BeausiteClassicWebTrial-Bold';
+}
+
+body {
+  font-family: var(--font);
+}
+
 #dataGoesHere {
   position: relative;
   z-index: 0;
   overflow: hidden;
 }
 
-#inputTab {
+h2 {
+  margin: 2em auto;
+}
+
+#uI {
   position: relative;
   z-index: 11;
+  padding: 1em;
+  position: absolute;
+}
+
+.colorInput {
+  transform: scale(25);
+  margin: 2em;
+  border-radius: 50%;
+}
+
+svg {
+  width: 100vw;
 }
 
 #mask {
@@ -15,12 +58,17 @@
   top: 0;
   left: 0;
   height: 100vh;
+  /* display: none; */
 }
 
 .part {
-  height: 33vh;
+  height: 40vh;
   position: relative;
   z-index: 0;
+  width: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
 }
 
 /* #topPart {
@@ -35,23 +83,21 @@
   background-color: #ffdd1d;
 } */
 
+
 .confetti{
-  width: 124px;
-  height: 75px;
-  background: black;
+  /* width: 164px;
+  height: 100px; */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-image: url('mGDotMask.png') cover;
+  object-fit: fill;
+  /* background-color: aquamarine; */
   position:absolute;
   transform: rotate(20deg);
   transition: 200ms;
-  mix-blend-mode:multiply;
-  opacity: 60%;
+  mix-blend-mode:overlay;
   z-index: 0;
-}
-
-body {
-  background-image: url('perfumeMask.png');
-  position: relative;
-  z-index: 100;
-  width: 100vw;
 }
 
 /* .scent {

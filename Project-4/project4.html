@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RESETS.css">
     <link rel="stylesheet" href="project4styles.css">
     <title>Sensory Packaging</title>
 </head>
 <body>
-    <div id="inputTab">
+    <div id="uI">
+        <h2>Calm ↔️ Exciting</h2>
+        <input type="range" value="4" id="feelingSlider" min="0" max="9" step="0.1">
+        <h2>Top Note</h2>
+        <input type="range" value="20" id="topSlider" min="10" max="200" step="10">
         <input type="color" id="colorInput1" class="colorInput" value="#FFC450">
+        <h2>Middle Note</h2>
+        <input type="range" value="20" id="midSlider" min="10" max="200" step="10">
         <input type="color" id="colorInput2" class="colorInput" value="#BC893C">
+        <h2>Base Note</h2>
+        <input type="range" value="20" id="botSlider" min="10" max="200" step="10">
         <input type="color" id="colorInput3" class="colorInput" value="#A2E57A">
     </div>
     <div id="dataGoesHere"></div>
