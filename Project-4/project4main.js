@@ -1,6 +1,7 @@
 
 const dataParent = document.getElementById("dataGoesHere");
 const feelingSlider = document.getElementById("feelingSlider");
+const topSlider = document.getElementById("topSlider");
 const colorInputs = document.getElementsByClassName("colorInput");
 const colorInput1 = document.getElementById("colorInput1");
 const colorInput2 = document.getElementById("colorInput2");
@@ -68,10 +69,10 @@ fetch(opensheet_uri)
           dots.style.transform = `rotate(${datapoint.reviews * 360}deg)`;
           dots.style.backgroundColor = randomFromArray(colors);
 
-          if (datapoint.feeling < 5) {
-            console.log("calm");
-            dots.style.margin = "5em";
-        }
+        //   if (datapoint.feeling < 5) {
+        //     console.log("calm");
+        //     dots.style.margin = "5em";
+        // }
 
           topPart.appendChild(dots);
           appendSVG(dots);
@@ -95,15 +96,27 @@ fetch(opensheet_uri)
           dots.style.transform = `rotate(${Math.random() * 360}deg)`;
           dots.style.backgroundColor = randomFromArray(colors);
           feelingSlider.addEventListener("input", changeMargin);
+          topSlider.addEventListener("input", changePosition);
           botPart.appendChild(dots);
 
           function changeMargin(){
               dots.style.margin = feelingSlider.value + "em";
         }
+        function changePosition() {
+          let topDots = document.querySelectorAll('#topPart .confetti');
+          topDots.forEach(function (dot) {
+            dot.style.top = topSlider.value + "px";
+          });
         }
+
+    }
       }
 
-      dataParent.body.appendChild(imageDiv);
+      const imageDiv = document.createElement("div");
+imageDiv.id = "imageDiv";
+
+// Append imageDiv to the body
+document.body.appendChild(imageDiv);
 
       function changeTopColor() {
         let topDots = document.querySelectorAll('#topPart .confetti');        

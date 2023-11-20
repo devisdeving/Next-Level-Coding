@@ -31,6 +31,24 @@ body {
   overflow: hidden;
 }
 
+.slider {
+  height: 5px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  border-radius: 50em;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #000000;
+  cursor: pointer;
+}
+
 h2 {
   margin: 2em auto;
 }
@@ -58,6 +76,7 @@ svg {
   top: 0;
   left: 0;
   height: 100vh;
+  pointer-events: none;
   /* display: none; */
 }
 
