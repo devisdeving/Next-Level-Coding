@@ -112,11 +112,12 @@ svg {
   background-image: url('mGDotMask.png') cover;
   object-fit: fill;
   /* background-color: aquamarine; */
-  position:absolute;
+  position: absolute;
   transform: rotate(20deg);
   transition: 200ms;
   mix-blend-mode:overlay;
   z-index: 0;
+  filter: blur(2px);
 }
 
 /* .scent {
