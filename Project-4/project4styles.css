@@ -23,51 +23,22 @@
 
 body {
   font-family: var(--font);
+  background-color: #000000;
+  padding: 1em;
 }
 
 #dataGoesHere {
   position: relative;
   z-index: 0;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.slider {
-  height: 5px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
-  border-radius: 50em;
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%; 
-  background: #000000;
-  cursor: pointer;
-}
-
-h2 {
-  margin: 2em auto;
-}
-
-#uI {
-  position: relative;
-  z-index: 11;
-  padding: 1em;
+.scentName {
   position: absolute;
-}
-
-.colorInput {
-  transform: scale(25);
-  margin: 2em;
-  border-radius: 50%;
-}
-
-svg {
-  width: 100vw;
+  z-index: 5;
+  font-size: 24px;
 }
 
 #mask {
@@ -81,33 +52,16 @@ svg {
 }
 
 .part {
-  height: 40vh;
+  height: 156px;
   position: relative;
   z-index: 0;
-  width: 20%;
-  top: 50%;
-  left: 50%;
-  transform: translate( -50%, -50%);
+  width: auto;
 }
-
-/* #topPart {
-  background-color: #ff1d1d;
-}
-
-#midPart {
-  background-color: #1d61ff;
-}
-
-#botPart {
-  background-color: #ffdd1d;
-} */
 
 
 .confetti{
-  /* width: 164px;
-  height: 100px; */
-  width: 18px;
-  height: 18px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-image: url('mGDotMask.png') cover;
   object-fit: fill;
@@ -117,18 +71,43 @@ svg {
   transition: 200ms;
   mix-blend-mode:overlay;
   z-index: 0;
-  filter: blur(2px);
+  /* filter: blur(2px); */
 }
 
-/* .scent {
-    height: 108px;
-    width: 192px;
+path {
+  fill: #1400ac;
+}
+
+.scent {
+    height: 468px;
+    width: 247px;
     background-color: rgb(255, 255, 255);
-    position: relative;
-    background-image: url('perfumeMask.png');
     z-index: 3;
+    border-radius: 5px;
+    margin: 1em;
+    overflow: hidden;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.partContainer {
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#selector {
+  background-color: white;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+/* 
 .dots {
   width: auto;
   background: black;
