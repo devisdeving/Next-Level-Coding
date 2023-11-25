@@ -15,15 +15,38 @@ fetch(opensheet_uri)
   .then(function (data) {
     console.log(data);
 
+    // Create options for the dropdown menu
+    for (let i = 0; i < data.length; i++) {
+      const optionName = document.createElement("OPTION");
+      optionName.innerHTML = data[i].name;
+      selector.appendChild(optionName);
+    }
+
+    // Event listener for the dropdown menu change
+    selector.addEventListener("change", function () {
+      const selectedName = selector.value;
+
+      // Hide all scent boxes
+      const scentBoxes = document.querySelectorAll(".scent");
+      scentBoxes.forEach((box) => (box.style.display = "none"));
+
+      // Show the selected scent box
+      const selectedBox = document.querySelector(`.scent[data-name="${selectedName}"]`);
+      if (selectedBox) {
+        selectedBox.style.display = "block";
+      }
+    });
+
     for (let datapoint of data) {
       const scentBox = document.createElement("DIV");
       scentBox.classList.add("scent");
+      scentBox.setAttribute("data-name", datapoint.name); // Set a data attribute for each scent box
       const nameDiv = document.createElement("DIV");
       nameDiv.classList.add("scentName");
-    
+
       const name = datapoint.name;
       nameDiv.innerHTML = name;
-    
+
       scentBox.appendChild(nameDiv);
 
       const partContainer = document.createElement("DIV");
@@ -33,7 +56,7 @@ fetch(opensheet_uri)
         const partDiv = document.createElement("DIV");
         partDiv.classList.add("part");
         partDiv.id = `part${partIndex}`;
-        
+
         partContainer.appendChild(partDiv);
         scentBox.appendChild(partContainer);
 
@@ -67,26 +90,10 @@ fetch(opensheet_uri)
         }
       }
 
-      if (datapoint.day){
+      if (datapoint.day) {
         console.log("wear this perfume in the day");
         partContainer.style.transform = "scaleY(-1)";
       }
-      selector.addEventListener("input", function(){
-      for (let i = 0; i < data.length; i++) {
-        const optionName = document.createElement("OPTION");
-      
-        optionName.innerHTML = name;
-  
-        if (optionName.value == selector.value){
-          scentBox.style.display = "block";
-        } else {
-          scentBox.style.display = "none";
-        }
-
-        selector.appendChild(optionName);
-        body.appendChild(selector);
-      }
-      });
 
       dataParent.appendChild(scentBox);
     }

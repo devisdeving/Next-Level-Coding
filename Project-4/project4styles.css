@@ -91,6 +91,11 @@ path {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: none;
+}
+
+.scent:first-child {
+  display: flex;
 }
 
 .partContainer {
