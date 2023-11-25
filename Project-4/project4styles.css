@@ -23,8 +23,23 @@
 
 body {
   font-family: var(--font);
-  background-color: #000000;
+  background-color: rgb(231, 231, 231);
   padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#ui {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h2 {
+  color: #00087e;
+  font-size: 24px;
 }
 
 #dataGoesHere {
@@ -39,6 +54,9 @@ body {
   position: absolute;
   z-index: 5;
   font-size: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #mask {
@@ -84,7 +102,6 @@ path {
     background-color: rgb(255, 255, 255);
     z-index: 3;
     border-radius: 5px;
-    margin: 1em;
     overflow: hidden;
     padding: 1em;
     display: flex;
@@ -92,6 +109,7 @@ path {
     align-items: center;
     justify-content: center;
     display: none;
+    position: relative;
 }
 
 .scent:first-child {
@@ -109,7 +127,12 @@ path {
 #selector {
   background-color: white;
   padding: 1em;
-  border-radius: 5px;
+  border-radius: 50px;
+  margin: 1em;
+  cursor: s-resize;
+  color: #00087e;
+  width: fit-content;
+  text-align: center;
 }
 
 /* 
