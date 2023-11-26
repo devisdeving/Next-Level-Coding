@@ -41,13 +41,53 @@ fetch(opensheet_uri)
       const scentBox = document.createElement("DIV");
       scentBox.classList.add("scent");
       scentBox.setAttribute("data-name", datapoint.name); // Set a data attribute for each scent box
-      const nameDiv = document.createElement("DIV");
-      nameDiv.classList.add("scentName");
+      
+      // LOGO AND DYNAMIC NAME  
+      const textInfo = document.createElement("DIV");
+      textInfo.classList.add("textInfo");
 
-      const name = datapoint.name;
-      nameDiv.innerHTML = name;
+      // const logoContainer = document.createElement("DIV");
+      // logoContainer.id = "logo";
 
-      scentBox.appendChild(nameDiv);
+      // const logo = document.createElement("img");
+      // logo.src = url("mgLogo.png");
+
+      // logoContainer.appendChild(logo);
+
+      const logoContainer = document.createElement("DIV");
+      logoContainer.id = "logoContainer";
+
+      const logo = document.createElement("img");
+      logo.src = "mgLogo.png";
+
+      logoContainer.appendChild(logo);
+
+      const textContainer = document.createElement("DIV");
+      textContainer.id = "textContainer";
+
+      const nameElement = document.createElement("DIV");
+      nameElement.textContent = datapoint.name;
+
+      const flOzElement = document.createElement("DIV");
+      flOzElement.textContent = `${datapoint.flOz} fl. oz.e ${datapoint.mL} ml`;
+
+      textContainer.appendChild(nameElement);
+      textContainer.appendChild(flOzElement);
+
+      textInfo.appendChild(logoContainer);
+      textInfo.appendChild(textContainer);
+
+      // textInfo.appendChild(logoContainer);
+
+      // const name = datapoint.name;
+      // textInfo.innerHTML = name;
+      scentBox.appendChild(textInfo);
+
+      const mask = document.createElement("img");
+      mask.src = "perfumeMask.png";
+      mask.classList.add("mask");
+
+      scentBox.appendChild(mask);
 
       const partContainer = document.createElement("DIV");
       partContainer.classList.add("partContainer");
@@ -70,9 +110,10 @@ fetch(opensheet_uri)
         const priColor = datapoint.priColor;
         const secColor = datapoint.secColor;
         const terColor = datapoint.terColor;
-        const colors = [priColor, priColor, priColor, secColor, secColor, terColor];
+        const accentColor = datapoint.accentColor;
+        const colors = [priColor, priColor, priColor, secColor, secColor, terColor, accentColor];
 
-        for (let i = 0; i < satMapped * partIndex * 20; i++) {
+        for (let i = 0; i < satMapped * partIndex * 50; i++) {
           let dots = document.createElement("DIV");
           dots.classList.add("confetti");
           dots.style.left = Math.random() * 100 + "%";
@@ -93,6 +134,7 @@ fetch(opensheet_uri)
       if (datapoint.day) {
         console.log("wear this perfume in the day");
         partContainer.style.transform = "scaleY(-1)";
+        partContainer.style.top = "-35" + "%";
       }
 
       dataParent.appendChild(scentBox);

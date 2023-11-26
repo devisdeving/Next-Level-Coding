@@ -23,23 +23,26 @@
 
 body {
   font-family: var(--font);
-  background-color: rgb(231, 231, 231);
-  padding: 1em;
+  background-color: #00087e;
+  color: #00087e;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+
+  font-size: 36px;
 }
 
 #ui {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-h2 {
-  color: #00087e;
-  font-size: 24px;
+  color: #ffffff;
 }
 
 #dataGoesHere {
@@ -50,22 +53,54 @@ h2 {
   flex-wrap: wrap;
 }
 
-.scentName {
+.scent {
+  height: 702px;
+  width: 370px;
+  background-color: rgb(255, 255, 255);
+  z-index: 3;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: relative;
+}
+
+.scent:first-child {
+display: flex;
+}
+
+.textInfo {
   position: absolute;
-  z-index: 5;
+  z-index: 11;
   font-size: 24px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
 }
 
-#mask {
+#textContainer {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+#logoContainer img{
+  width: 100%;
+}
+
+.mask {
   position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   pointer-events: none;
+  object-fit: cover;
   /* display: none; */
 }
 
@@ -76,6 +111,16 @@ h2 {
   width: auto;
 }
 
+/* #part3 {
+  width: 40%;
+  height: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#part2 {
+  border-radius: 500px 500px 0 0;
+} */
 
 .confetti{
   width: 10px;
@@ -83,12 +128,14 @@ h2 {
   border-radius: 50%;
   background-image: url('mGDotMask.png') cover;
   object-fit: fill;
-  /* background-color: aquamarine; */
   position: absolute;
   transform: rotate(20deg);
   transition: 200ms;
-  mix-blend-mode:overlay;
+  /* mix-blend-mode:overlay; */
+  mix-blend-mode:multiply;
+  /* filter: blur(5px); */
   z-index: 0;
+  /* filter:brightness(1.25); */
   /* filter: blur(2px); */
 }
 
@@ -96,38 +143,25 @@ path {
   fill: #1400ac;
 }
 
-.scent {
-    height: 468px;
-    width: 247px;
-    background-color: rgb(255, 255, 255);
-    z-index: 3;
-    border-radius: 5px;
-    overflow: hidden;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: none;
-    position: relative;
-}
-
-.scent:first-child {
-  display: flex;
-}
-
 .partContainer {
-  height: auto;
+  height: 120%;
   width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 20%;
 }
+
+/* .partContainer::before {
+  content: '';
+  background: url("perfumeMask.png");
+} */
 
 #selector {
   background-color: white;
   padding: 1em;
-  border-radius: 50px;
+  border-radius: 50em;
   margin: 1em;
   cursor: s-resize;
   color: #00087e;
