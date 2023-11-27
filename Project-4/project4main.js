@@ -71,7 +71,8 @@ fetch(opensheet_uri)
 
       scentBox.appendChild(textInfo);
 
-      const satMapped = datapoint.satisfaction;
+      const satisfaction = datapoint.satisfaction;
+      const reviews = datapoint.reviews;
       const feeling = datapoint.feeling * 5;
       const priColor = datapoint.priColor;
       const secColor = datapoint.secColor;
@@ -101,7 +102,10 @@ fetch(opensheet_uri)
         const midPart = partIndex === 2 ? partDiv : null;
         const botPart = partIndex === 3 ? partDiv : null;
 
-        for (let i = 0; i < satMapped * partIndex * 2 * 50; i++) {
+        const satMapped = (satisfaction * 160 / reviews) * partIndex * 25;
+        console.log(satMapped);
+
+        for (let i = 0; i < satMapped; i++) {
           let dots = document.createElement("DIV");
           dots.classList.add("confetti");
           dots.style.left = Math.random() * 100 + "%";
