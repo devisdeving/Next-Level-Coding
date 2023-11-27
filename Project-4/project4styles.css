@@ -34,15 +34,50 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100vw;
-
   font-size: 36px;
+}
+
+#selectorContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #ui {
   display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+#key {
+  display: flex;
+}
+
+.keyElem {
+  display: flex;
   flex-direction: row;
   align-items: center;
-  color: #ffffff;
+  margin: 1em;
+}
+
+h3{
+  font-size: 22px;
+  margin: auto 1em;
+  font-family: var(--font-bold);
+}
+
+p {
+  font-size: 18px;
+  font-family: var(--font);
+}
+
+.notes {
+  padding-top: 0.5em;
+}
+
+#notesDiv {
+  width: max-content;
+  height: 150%;
 }
 
 #dataGoesHere {
@@ -71,6 +106,7 @@ body {
 
 .scent:first-child {
 display: flex;
+/* filter:saturate(0.9); */
 }
 
 .textInfo {
@@ -81,6 +117,10 @@ display: flex;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
+  height: 90%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
 }
 
 #textContainer {
@@ -96,11 +136,12 @@ display: flex;
 .mask {
   position: absolute;
   z-index: 10;
-  top: 0;
+  top: 5%;
   left: 0;
   height: 100%;
   pointer-events: none;
   object-fit: cover;
+  /* transform: scale(1.1); */
   /* display: none; */
 }
 
@@ -110,17 +151,6 @@ display: flex;
   z-index: 0;
   width: auto;
 }
-
-/* #part3 {
-  width: 40%;
-  height: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#part2 {
-  border-radius: 500px 500px 0 0;
-} */
 
 .confetti{
   width: 10px;
@@ -143,24 +173,9 @@ path {
   fill: #1400ac;
 }
 
-.partContainer {
-  height: 120%;
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 20%;
-}
-
-/* .partContainer::before {
-  content: '';
-  background: url("perfumeMask.png");
-} */
-
 #selector {
   background-color: white;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 50em;
   margin: 1em;
   cursor: s-resize;
@@ -169,20 +184,17 @@ path {
   text-align: center;
 }
 
-/* 
-.dots {
-  width: auto;
-  background: black;
-  mask-image: url('mGDot.svg');
-  -webkit-mask-image: url('mGDot.svg');
-  mix-blend-mode:multiply;
-  position:absolute;
-  transform: rotate(20deg);
-  transition: 200ms;
-  z-index: 0;
+.partContainer {
+  height: 120%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  transform: scale(1.2);
 }
 
-img {
-  aspect-ratio: 1.64;
-  width: 40px;
-} */
+.partContainer:first-child {
+  transform: scale(1.5);
+}

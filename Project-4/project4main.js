@@ -40,19 +40,11 @@ fetch(opensheet_uri)
     for (let datapoint of data) {
       const scentBox = document.createElement("DIV");
       scentBox.classList.add("scent");
-      scentBox.setAttribute("data-name", datapoint.name); // Set a data attribute for each scent box
+      scentBox.setAttribute("data-name", datapoint.name);
       
       // LOGO AND DYNAMIC NAME  
       const textInfo = document.createElement("DIV");
       textInfo.classList.add("textInfo");
-
-      // const logoContainer = document.createElement("DIV");
-      // logoContainer.id = "logo";
-
-      // const logo = document.createElement("img");
-      // logo.src = url("mgLogo.png");
-
-      // logoContainer.appendChild(logo);
 
       const logoContainer = document.createElement("DIV");
       logoContainer.id = "logoContainer";
@@ -77,11 +69,15 @@ fetch(opensheet_uri)
       textInfo.appendChild(logoContainer);
       textInfo.appendChild(textContainer);
 
-      // textInfo.appendChild(logoContainer);
-
-      // const name = datapoint.name;
-      // textInfo.innerHTML = name;
       scentBox.appendChild(textInfo);
+
+      const satMapped = datapoint.satisfaction;
+      const feeling = datapoint.feeling * 5;
+      const priColor = datapoint.priColor;
+      const secColor = datapoint.secColor;
+      const terColor = datapoint.terColor;
+      const accentColor = datapoint.accentColor;
+      const colors = [priColor, priColor, priColor, secColor, secColor, terColor, accentColor];
 
       const mask = document.createElement("img");
       mask.src = "perfumeMask.png";
@@ -105,20 +101,12 @@ fetch(opensheet_uri)
         const midPart = partIndex === 2 ? partDiv : null;
         const botPart = partIndex === 3 ? partDiv : null;
 
-        const satMapped = datapoint.satisfaction;
-        const feeling = datapoint.feeling * 5;
-        const priColor = datapoint.priColor;
-        const secColor = datapoint.secColor;
-        const terColor = datapoint.terColor;
-        const accentColor = datapoint.accentColor;
-        const colors = [priColor, priColor, priColor, secColor, secColor, terColor, accentColor];
-
-        for (let i = 0; i < satMapped * partIndex * 50; i++) {
+        for (let i = 0; i < satMapped * partIndex * 2 * 50; i++) {
           let dots = document.createElement("DIV");
           dots.classList.add("confetti");
           dots.style.left = Math.random() * 100 + "%";
           dots.style.top = Math.random() * 100 + "%";
-          // dots.style.margin = `${feeling * 10}px`;
+          dots.style.filter = `blur(${feeling / 20}px)`;
           dots.style.backgroundColor = randomFromArray(colors);
 
           if (topPart) {
@@ -127,6 +115,16 @@ fetch(opensheet_uri)
             midPart.appendChild(dots);
           } else if (botPart) {
             botPart.appendChild(dots);
+          }
+
+          if (priColor == null) {
+            console.log("no priCOlor");
+            dots.style.background = `hsl(${Math.random()*120}, 60%, 60%)`;
+          }
+
+          if (secColor == null) {
+            console.log("no priCOlor");
+            dots.style.background = `hsl(${Math.random()*120}, 60%, 60%)`;
           }
         }
       }
