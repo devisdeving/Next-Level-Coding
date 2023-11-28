@@ -94,7 +94,7 @@ fetch(opensheet_uri)
         partDiv.classList.add("part");
         partDiv.id = `part${partIndex}`;
 
-        partContainer.appendChild(partDiv);
+        partContainer.appendChild(partDiv);7
         scentBox.appendChild(partContainer);
 
         // Set up topPart, midPart, and botPart references
