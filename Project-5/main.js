@@ -1,10 +1,18 @@
 let drawingDots = [];
 
+let cursorImage;
+
+function preload(){
+  cursorImage = loadImage('drawEllipse.png')
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0,0);
   // Load points from local storage
   drawingDots = JSON.parse(localStorage.getItem('array-of-dots') || '[]');
+  color1 = color("#F3EBD4");
+  color2 = color("#B9B9B9");
 }
 
 function draw() {
@@ -33,7 +41,7 @@ function updateCanvas() {
 
 function drawDot(point) {
   const elapsedTime = millis() - point.time;
-  const fadeDuration = 30000;
+  const fadeDuration = 10000;
   let alpha = 255;
 
   if (elapsedTime < fadeDuration) {
@@ -42,18 +50,11 @@ function drawDot(point) {
 
   noStroke();
 
-  // Define the gradient colors
-  let color1 = color("#F3EBD4");
-  let color2 = color("#B9B9B9");
-
   // Interpolate between the two colors based on the elapsed time
   let blendedColor = lerpColor(color1, color2, elapsedTime / fadeDuration);
 
-  // Set the fill color to the interpolated color with adjusted alpha
   fill(red(blendedColor), green(blendedColor), blue(blendedColor), alpha);
-
-  ellipse(point.x, point.y, 30);
-  // ellipse(point.x + random(-5, 5), point.y+random(-5, 5), 30);
+  image(cursorImage, point.x, point.y, 30, 30)
 }
 
 function clearDrawing() {
