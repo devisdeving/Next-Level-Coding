@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%);
+}
+
+main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%);
+    height: 100vh;
+    width: 100vw;
+    filter: url(#noise);
+}
+
+svg {
+    display: none;
+}
