@@ -1,15 +1,79 @@
+@font-face {
+    font-family: 'NaNWeissTRIAL-Regular';
+    src: url('NaNWeissTRIAL-Regular.woff2') format('woff2'),
+        url('NaNWeissTRIAL-Regular.woff') format('woff');
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+  }
+  
+  :root {
+    --font: 'NaNWeissTRIAL-Regular';
+  }
+  
+
 body {
     background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%);
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    cursor: none;
+}
+
+header {
+    font-family: var(--font);
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #0f54ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-size: 18px;
+    position: absolute;
+    top: 40vh;
 }
 
 main {
     position: absolute;
     top: 0px;
     left: 0px;
-    background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%);
+    /* background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%); */
     height: 100vh;
     width: 100vw;
     filter: url(#noise);
+    z-index: 3;
+}
+
+.follower {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(180deg, #908B7F 0%, #FFF7E3 100%);
+    position: absolute;
+    pointer-events: none;
+    filter: url(#noise);
+    overflow: visible;
+    border-radius: 50em;
+}
+
+#bG {
+    background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%);
+    height: 100vh;
+    width: 100vw;
 }
 
 svg {

@@ -69,3 +69,13 @@ function keyPressed(){
     clearDrawing() 
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const follower = document.querySelector(".follower");
+
+  document.addEventListener("mousemove", function(e) {
+    // Set the position of the follower div to the cursor coordinates
+    follower.style.left = e.pageX + "px";
+    follower.style.top = e.pageY + "px";
+  });
+});
