@@ -59,7 +59,7 @@ function drawDot(point) {
     let blendedColor = lerpColor(color1, color2, elapsedTime / fadeDuration);
     console.log(alpha)
     fill(red(blendedColor), green(blendedColor), blue(blendedColor), alpha);
-    ellipse(point.x, point.y, 1, 1)
+    line(point.x, point.y, 1, 1)
   } 
 
 
