@@ -18,15 +18,22 @@ function setup() {
 function draw() {
   // Continuously update and redraw the canvas
   updateCanvas();
+  // console.log(drawingDots);
 }
 
+
+
 function mouseDragged() {
-  const point = {
-    x: mouseX,
-    y: mouseY,
-    time: millis() // Current timestamp
-  };
-  drawingDots.push(point);
+  for (let i=0;i<100;i++){
+    const point = {
+      x: mouseX,
+      y: mouseY,
+      offsetX: random(30),
+      offsetY: random(30),
+      time: millis() // Current timestamp
+    };
+    drawingDots.push(point);
+  }
   localStorage.setItem('array-of-dots', JSON.stringify(drawingDots));
 }
 
@@ -46,15 +53,17 @@ function drawDot(point) {
 
   if (elapsedTime < fadeDuration) {
     alpha = 255 * (1 - (elapsedTime / fadeDuration));
-  }
+    noStroke();
 
-  noStroke();
+    // Interpolate between the two colors based on the elapsed time
+    let blendedColor = lerpColor(color1, color2, elapsedTime / fadeDuration);
+    console.log(alpha)
+    fill(red(blendedColor), green(blendedColor), blue(blendedColor), alpha);
+    ellipse(point.x, point.y, 1, 1)
+  } 
 
-  // Interpolate between the two colors based on the elapsed time
-  let blendedColor = lerpColor(color1, color2, elapsedTime / fadeDuration);
 
-  fill(red(blendedColor), green(blendedColor), blue(blendedColor), alpha);
-  image(cursorImage, point.x, point.y, 30, 30)
+  // image(cursorImage, point.x, point.y, 30, 30)
 }
 
 function clearDrawing() {
