@@ -1,6 +1,12 @@
 let drawingDots = [];
+let circleRadius = 25;
+
+let isKeyPressed = false;
+let startTime;
+let opacity = 0;
 
 let cursorImage;
+let counter = 0;
 
 function preload(){
   cursorImage = loadImage('drawEllipse.png')
@@ -13,12 +19,16 @@ function setup() {
   drawingDots = JSON.parse(localStorage.getItem('array-of-dots') || '[]');
   color1 = color("#F3EBD4");
   color2 = color("#B9B9B9");
+  myTime = millis()
 }
 
 function draw() {
   // Continuously update and redraw the canvas
   updateCanvas();
   // console.log(drawingDots);
+  // if(isKeyPressed){
+
+  // }
 }
 
 
@@ -28,8 +38,10 @@ function mouseDragged() {
     const point = {
       x: mouseX,
       y: mouseY,
-      offsetX: random(30),
-      offsetY: random(30),
+      angle: random(TWO_PI),
+      r: random(circleRadius),
+      offsetX: random(-30, 30),
+      offsetY: random(-30, 30),
       time: millis() // Current timestamp
     };
     drawingDots.push(point);
@@ -51,15 +63,30 @@ function drawDot(point) {
   const fadeDuration = 10000;
   let alpha = 255;
 
-  if (elapsedTime < fadeDuration) {
-    alpha = 255 * (1 - (elapsedTime / fadeDuration));
+  // if (elapsedTime < fadeDuration) {
+    // alpha = 255 * (1 - (elapsedTime / fadeDuration));
     noStroke();
 
     // Interpolate between the two colors based on the elapsed time
     let blendedColor = lerpColor(color1, color2, elapsedTime / fadeDuration);
     console.log(alpha)
-    fill(red(blendedColor), green(blendedColor), blue(blendedColor), alpha);
-    line(point.x, point.y, 1, 1)
+    fill(red(blendedColor), green(blendedColor), blue(blendedColor), opacity);
+    for(i=0; i<80; i++){
+      ellipse(point.x+cos(point.angle)*point.r, point.y+sin(point.angle)*point.r, 2.5)
+    // }
+
+    if(isKeyPressed){
+      let elapsedTime = millis()-startTime;
+      opacity = map(elapsedTime, 0, 3000, 0, 255)
+      opacity = constrain(opacity, 0, 255)
+      if(elapsedTime==3000){
+        localStorage.removeItem('array-of-dots');
+        drawingDots = [];
+        opacity = 255;
+      }
+    }
+
+    
   } 
 
 
@@ -67,17 +94,19 @@ function drawDot(point) {
 }
 
 function clearDrawing() {
-  localStorage.removeItem('array-of-dots');
-  drawingDots = [];
-  clear();
-  background(0,0);
+  
+  
+  // clear()
+  // background(0, opacity);
+  // console
 }
 
+
 function keyPressed(){
-  if( key === ' '){
-    clearDrawing() 
-  }
+  isKeyPressed =! isKeyPressed
+  console.log(isKeyPressed)
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const follower = document.querySelector(".follower");
