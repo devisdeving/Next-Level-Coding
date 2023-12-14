@@ -20,6 +20,7 @@ function setup() {
   color1 = color("#F3EBD4");
   color2 = color("#B9B9B9");
   myTime = millis()
+  // localStorage.removeItem('array-of-dots');
 }
 
 function draw() {
@@ -70,9 +71,9 @@ function drawDot(point) {
     // Interpolate between the two colors based on the elapsed time
     let blendedColor = lerpColor(color1, color2, elapsedTime / fadeDuration);
     console.log(alpha)
-    fill(red(blendedColor), green(blendedColor), blue(blendedColor), opacity);
-    for(i=0; i<80; i++){
-      ellipse(point.x+cos(point.angle)*point.r, point.y+sin(point.angle)*point.r, 2.5)
+    fill(red(blendedColor), green(blendedColor), blue(blendedColor));
+    for(i=0; i<30; i++){
+      ellipse(point.x+cos(point.angle)*point.r, point.y+sin(point.angle)*point.r, 1)
     // }
 
     if(isKeyPressed){
