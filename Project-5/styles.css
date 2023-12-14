@@ -19,7 +19,11 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    /* cursor: none; */
+    cursor: none;
+}
+
+body:not(header) {
+    filter: url(#noise);
 }
 
 header {
@@ -55,14 +59,15 @@ main {
     /* background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%); */
     height: 100vh;
     width: 100vw;
-    filter: url(#noise);
+    filter: blur(5px);
     z-index: 3;
 }
 
 .follower {
     width: 40px;
     height: 40px;
-    background: linear-gradient(180deg, #908B7F 0%, #FFF7E3 100%);
+    /* background: linear-gradient(180deg, #908B7F 0%, #FFF7E3 100%); */
+    background: url(drawEllipse.png);
     position: absolute;
     pointer-events: none;
     filter: url(#noise);
