@@ -15,19 +15,30 @@
     </header>
     <svg>
         <filter id="noise">
-        <feTurbulence
-            type="turbulence"
-            baseFrequency="0.9"
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="1"
             result="static"
+          >
+            <animate
+              attributeName="baseFrequency"
+              values="0.9;0.91;0.9"
+              dur="5s"
+              repeatCount="indefinite"
             />
-        <feDisplacementMap in="SourceGraphic" in2="static" scale="20"/>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="static" scale="75" />
         </filter>
-    </svg>   
+      </svg>
+      
+    <div class="blur">
     <main>
 
     </main>
-    <!-- <div class="follower"></div> -->
-    <div id="bG"></div>
+    <div class="follower"></div>
+</div>
+    <div id="bG">
+    </div>
     <script src="p5.min.js" defer></script>
     <script src="main.js" defer async></script>
 </body>

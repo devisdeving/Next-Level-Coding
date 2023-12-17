@@ -12,19 +12,21 @@
   }
   
 
-body {
-    background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%);
+.blur {
+    background: linear-gradient(180deg, #a0a0a0 0%, #F3EBD4 100%);
     position: relative;
     z-index: 0;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     cursor: none;
+    filter: blur(0.5px);
+    position: fixed;
 }
-
-body:not(header) {
+/* 
+.blur:not(header) {
     filter: url(#noise);
-}
+} */
 
 header {
     font-family: var(--font);
@@ -44,6 +46,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: none;
 }
 
 p {
@@ -56,11 +59,12 @@ main {
     position: absolute;
     top: 0px;
     left: 0px;
-    /* background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%); */
-    height: 100vh;
+     height: 100vh;
     width: 100vw;
     filter: blur(5px);
     z-index: 3;
+    filter: url(#noise);
+    
 }
 
 .follower {
@@ -75,10 +79,21 @@ main {
     border-radius: 50em;
 }
 
-#bG {
+/* #bG {
     background: linear-gradient(180deg, #B9B9B9 0%, #F3EBD4 100%);
     height: 100vh;
     width: 100vw;
+} */
+
+img {
+    filter: url(#noise);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 svg {

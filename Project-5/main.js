@@ -42,7 +42,7 @@ function drawDot(point) {
   // Interpolate between the two colors based on the elapsed time
   let blendedColor = lerpColor(color1, color2, elapsedTime / fadeDuration);
   fill(red(blendedColor), green(blendedColor), blue(blendedColor), alpha);
-  image(cursorImage, point.x, point.y, 30, 30)
+  image(cursorImage, point.x, point.y, 40, 40)
 }
 function clearDrawing() {
   localStorage.removeItem('array-of-dots');
